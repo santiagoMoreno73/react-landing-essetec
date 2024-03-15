@@ -15,17 +15,23 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-sm-6 col-lg-2 offset-lg-1">
-            <div>
-              {/* <h5 className="footer-list-title mb-4">Company</h5>
-              <ul className="list-unstyled footer-list-menu">
-                <li>About US</li>
-                <li>Media </li>
-                <li>Career</li>
-                <li>Blog</li>
-              </ul> */}
-            </div>
+            <h5 className="footer-list-title mb-4">Company</h5>
+            <ul className="list-unstyled footer-list-menu">
+              <li>About Us</li>
+              <li>Media</li>
+              <li>Career</li>
+            </ul>
           </div>
-          <div className="col-sm-6 col-lg-2"></div>
+          <div className="col-sm-6 col-lg-2">
+            <h5 className="footer-list-title mb-4">More Info</h5>
+            <ul className="list-unstyled footer-list-menu">
+              <li>Pricing</li>
+              <li>For marketing</li>
+              <li>For Ceos</li>
+              <li>For Agencies</li>
+              <li>Our Apps</li>
+            </ul>
+          </div>
           <div className="col-sm-6 col-lg-3">
             <h5 className="footer-list-title mb-4">Company</h5>
             <div>
@@ -51,11 +57,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="row mt-4">
+        {/* <div className="row mt-4">
           <div className="text-center">
             <p className="text-white mb-0">2024 © ESSETEC. Created by ❤️</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
