@@ -2,7 +2,7 @@
 import "./main.css";
 // bootstrap import
 import "bootstrap/dist/css/bootstrap.css";
-import BootstrapClient from "./Helpers/BootstrapClient/BootstrapClient";
+import BootstrapClient from "./Components/BootstrapClient/BootstrapClient";
 // font
 import { Inter } from "next/font/google";
 
