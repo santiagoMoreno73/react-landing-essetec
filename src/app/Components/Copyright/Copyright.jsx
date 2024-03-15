@@ -2,7 +2,7 @@ import React from "react";
 
 const Copyright = () => {
   return (
-    <section class="bg-primary py-3">
+    <section className="bg-primary py-3">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
