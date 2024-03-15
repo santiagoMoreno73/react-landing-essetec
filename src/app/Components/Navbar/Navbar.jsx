@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // components
-import NavLink from "./NavLink";
+import NavLink from "./NavLink/NavLink";
 
 const navLinks = [
   { title: "Home", path: "#about" },
