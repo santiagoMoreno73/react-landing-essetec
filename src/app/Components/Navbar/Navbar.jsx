@@ -5,14 +5,14 @@ import Link from "next/link";
 // components
 import NavLink from "./NavLink/NavLink";
 // hooks
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
-  { title: "Home", path: "#about" },
-  { title: "Services", path: "#projects" },
-  { title: "Features", path: "#contact" },
-  { title: "Clients", path: "#contact" },
-  { title: "Plans", path: "#contact" },
+  { title: "Home", path: "#home" },
+  { title: "Services", path: "#services" },
+  { title: "Features", path: "#features" },
+  { title: "Clients", path: "#clients" },
+  { title: "Solutions", path: "#solutions" },
 ];
 
 const Navbar = () => {
@@ -23,7 +23,9 @@ const Navbar = () => {
     window.scrollY >= 90 ? setColor(true) : setColor(false);
   };
 
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+  }, []);
 
   return (
     <div className="container">
