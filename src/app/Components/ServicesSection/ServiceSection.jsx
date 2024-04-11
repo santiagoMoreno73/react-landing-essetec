@@ -6,7 +6,7 @@ import { FaEdit } from "react-icons/fa";
 
 const ServiceSection = () => {
   return (
-    <section className="section bg-light">
+    <section className="section bg-light" id="services">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">

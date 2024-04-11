@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="hero-section-5">
+    <section id="#home" className="hero-section-5">
       {/* <div className="bg-overlay"></div> */}
       <div className="container">
         <div className="justify-content-center row">
