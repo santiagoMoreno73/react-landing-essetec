@@ -1,4 +1,8 @@
+"use client";
 import React from "react";
+// icons
+import { AiFillMacCommand } from "react-icons/ai";
+import { FaEdit } from "react-icons/fa";
 
 const ServiceSection = () => {
   return (
@@ -23,7 +27,9 @@ const ServiceSection = () => {
             <div className="text-center p-4 mt-3">
               <div className="avatar-md mx-auto mb-4">
                 <span className="avatar-title rounded-circle bg-soft-primary">
-                  R
+                  <i>
+                    <AiFillMacCommand />
+                  </i>
                 </span>
               </div>
               <h5 className="font-18">Bootstrap UI based</h5>
@@ -36,7 +42,9 @@ const ServiceSection = () => {
             <div className="text-center p-4 mt-3">
               <div className="avatar-md mx-auto mb-4">
                 <span className="avatar-title rounded-circle bg-soft-primary">
-                  R
+                  <i>
+                    <FaEdit width={120} height={120} />
+                  </i>
                 </span>
               </div>
               <h5 className="font-18">Bootstrap UI based</h5>
