@@ -1,6 +1,4 @@
 import { FC, PropsWithChildren } from "react";
-// next
-import Head from "next/head";
 // ui
 import { Navbar, Footer, Copyright } from "../ui";
 
