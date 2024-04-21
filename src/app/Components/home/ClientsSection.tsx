@@ -1,6 +1,4 @@
-import React from "react";
-
-const ClientsSection = () => {
+export const ClientsSection = () => {
   return (
     <section className="section bg-light" id="clients">
       <div className="container">
@@ -42,5 +40,3 @@ const ClientsSection = () => {
     </section>
   );
 };
-
-export default ClientsSection;

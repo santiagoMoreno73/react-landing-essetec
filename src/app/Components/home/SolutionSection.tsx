@@ -1,7 +1,4 @@
-"use client";
-import React from "react";
-
-const SolutionSection = () => {
+export const SolutionSection = () => {
   return (
     <section className="section bg-primary" id="solutions">
       <div className="container">
@@ -54,5 +51,3 @@ const SolutionSection = () => {
     </section>
   );
 };
-
-export default SolutionSection;

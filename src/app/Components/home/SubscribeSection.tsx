@@ -1,7 +1,4 @@
-"use client";
-import React from "react";
-
-const SubscribeSection = () => {
+export const SubscribeSection = () => {
   return (
     <section className="section">
       <div className="container">
@@ -52,5 +49,3 @@ const SubscribeSection = () => {
     </section>
   );
 };
-
-export default SubscribeSection;

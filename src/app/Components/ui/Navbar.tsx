@@ -3,19 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 // components
-import NavLink from "./NavLink/NavLink";
+import { NavLink } from "./NavLink";
 // hooks
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { title: "Home", path: "#home" },
-  { title: "Services", path: "#services" },
-  { title: "Features", path: "#features" },
-  { title: "Clients", path: "#clients" },
-  { title: "Solutions", path: "#solutions" },
+  { title: "Inicio", path: "#home" },
+  { title: "Servicios", path: "#services" },
+  { title: "Carácteristicas", path: "#features" },
+  { title: "Clientes", path: "#clients" },
+  { title: "Soluciones", path: "#solutions" },
 ];
 
-const Navbar = () => {
+export const Navbar = () => {
   // change color when scrolling
   const [color, setColor] = useState(false);
 
@@ -65,5 +65,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

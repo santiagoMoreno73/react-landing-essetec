@@ -1,7 +1,4 @@
-"use client";
-import React from "react";
-
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <section id="#home" className="hero-section-5">
       {/* <div className="bg-overlay"></div> */}
@@ -36,5 +33,3 @@ const HeroSection = () => {
     </section>
   );
 };
-
-export default HeroSection;

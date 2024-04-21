@@ -2,11 +2,7 @@
 import "./main.css";
 // bootstrap import
 import "bootstrap/dist/css/bootstrap.css";
-import BootstrapClient from "./Components/BootstrapClient/BootstrapClient";
-// font
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import BootstrapClient from "./components/BootstrapClient/BootstrapClient";
 
 export const metadata = {
   title: "ESSETEC",
@@ -16,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {children}
         <BootstrapClient />
       </body>

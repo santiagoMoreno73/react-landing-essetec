@@ -1,7 +1,4 @@
-"use client";
-import React from "react";
-
-const FeaturesSection = () => {
+export const FeaturesSection = () => {
   return (
     <section className="section" id="features">
       <div className="container">
@@ -109,5 +106,3 @@ const FeaturesSection = () => {
     </section>
   );
 };
-
-export default FeaturesSection;
