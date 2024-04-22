@@ -1,5 +1,5 @@
 // css
-import "./main.css";
+import "./globals.css";
 // bootstrap import
 import "bootstrap/dist/css/bootstrap.css";
 import BootstrapClient from "./components/BootstrapClient/BootstrapClient";
