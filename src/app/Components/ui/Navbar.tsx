@@ -6,6 +6,9 @@ import Link from "next/link";
 import { NavLink } from "./NavLink";
 // hooks
 import { useState, useEffect } from "react";
+// icons
+import { IoMdClose } from "react-icons/io";
+import { FaGripLines } from "react-icons/fa";
 
 const navLinks = [
   { title: "Inicio", path: "#home" },
@@ -18,13 +21,21 @@ const navLinks = [
 export const Navbar = () => {
   // change color when scrolling
   const [color, setColor] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   const changeColor = () => {
     window.scrollY >= 90 ? setColor(true) : setColor(false);
   };
 
+  const handleResize = () => {
+    if (window.innerWidth > 960) {
+      setNavOpen(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
+    window.addEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -37,7 +48,7 @@ export const Navbar = () => {
         }
       >
         <div className="container">
-          <Link href="/" className="logo navbar-brand">
+          <Link href="/" className="logo">
             <Image
               src="/images/logo.png"
               alt="logo image"
@@ -46,19 +57,36 @@ export const Navbar = () => {
               priority
             />
           </Link>
-          <div id="navbarCollapse" className="collapse navbar-collapse">
-            <div className="navbar-collapse">
-              <ul className="ms-auto navbar-center navbar-nav">
-                {navLinks.map((link, index) => (
-                  <li key={index} className="nav-item">
-                    <NavLink href={link.path} title={link.title} />
-                  </li>
-                ))}
-              </ul>
-              <button className="btn-rounded navbar-btn btn btn-success">
-                Try for free
-              </button>
-            </div>
+
+          {!navOpen ? (
+            <button onClick={() => setNavOpen(true)} className="navbar-toggler">
+              <IoMdClose />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavOpen(false)}
+              className="navbar-toggler"
+            >
+              <FaGripLines />
+            </button>
+          )}
+
+          <div
+            id="navbarCollapse"
+            className={
+              navOpen
+                ? "collapse show navbar-collapse"
+                : "collapse navbar-collapse"
+            }
+          >
+            <ul className="ms-auto navbar-center navbar-nav">
+              {navLinks.map((link, index) => (
+                <li key={index} className="nav-item">
+                  <NavLink href={link.path} title={link.title} />
+                </li>
+              ))}
+            </ul>
+            <button className="btn btn-rounded navbar-btn">Try for free</button>
           </div>
         </div>
       </nav>
