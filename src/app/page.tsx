@@ -7,7 +7,6 @@ import {
   FeaturesSection,
   ClientsSection,
   SolutionSection,
-  SubscribeSection,
 } from "./components/home";
 
 export const metadata = {
@@ -22,9 +21,9 @@ const Home: NextPage = () => {
       <HeroSection />
       <ServiceSection />
       <FeaturesSection />
-      <ClientsSection />
       <SolutionSection />
-      <SubscribeSection />
+      <ClientsSection />
+      {/* <SubscribeSection /> */}
     </BaseLayout>
   );
 };
