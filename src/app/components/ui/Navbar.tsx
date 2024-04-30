@@ -11,11 +11,11 @@ import { IoMdClose } from "react-icons/io";
 import { FaGripLines } from "react-icons/fa";
 
 const navLinks = [
-  { title: "Inicio", path: "#home" },
+  { title: "Inicio", path: "/" },
   { title: "Servicios", path: "#services" },
   { title: "Carácteristicas", path: "#features" },
   { title: "Clientes", path: "#clients" },
-  { title: "Soluciones", path: "#solutions" },
+  { title: "Acerca de nosotros", path: "/about" },
 ];
 
 export const Navbar = () => {
@@ -86,7 +86,7 @@ export const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <button className="btn btn-rounded navbar-btn">Try for free</button>
+            {/* <button className="btn btn-rounded navbar-btn">Try for free</button> */}
           </div>
         </div>
       </nav>
