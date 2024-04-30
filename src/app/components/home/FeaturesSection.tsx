@@ -1,3 +1,10 @@
+"use client";
+import { CardFeature } from "./CardFeature";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoMdTrendingUp } from "react-icons/io";
+import { MdOutlineSecurity } from "react-icons/md";
+import { IoServer } from "react-icons/io5";
+
 export const FeaturesSection = () => {
   return (
     <section className="section" id="features">
@@ -6,12 +13,15 @@ export const FeaturesSection = () => {
           <div className="col-lg-8">
             <div className="text-center mb-5">
               <h5 className="text-primary text-uppercase small-title">
-                Features
+                Características
               </h5>
-              <h4 className="mb-4">Key features of the product</h4>
+              <h4 className="mb-4">
+                Características clave de nuestros servicios.
+              </h4>
               <p>
-                It will be as simple as occidental in fact, it will be
-                Occidental.
+                Nuestros servicios se distinguen por una combinación de calidad
+                y accesibilidad, nuestras soluciones están diseñadas para
+                simplificar tus operaciones y maximizar tus resultados.
               </p>
             </div>
           </div>
@@ -21,84 +31,113 @@ export const FeaturesSection = () => {
             <div>
               <div className="avatar-md mb-4">
                 <span className="avatar-title rounded-circle bg-soft-primary">
-                  R
+                  <span className="color-primary">
+                    <IoMdTrendingUp className="icons-md" />
+                  </span>
                 </span>
               </div>
-              <h5>Improve your Marketing business</h5>
+              <h5>Aumente sus resultados de marketing</h5>
               <p className="mb-4">
-                If several languages coalesce, the grammar of the resulting
-                language is more simple and regular.
+                Potencie su estrategia de marketing con nuestra solución web.
+                Ofrecemos herramientas poderosas y fáciles de usar para mejorar
+                su presencia en línea y aumentar la interacción con sus clientes
+                potenciales.
               </p>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col">
                   <p>Donec quam felis</p>
                 </div>
                 <div className="col">
                   <p>Donec quam felis</p>
                 </div>
-              </div>
+              </div> */}
               <div className="mt-4">
                 <a href="/" className="btn btn-primary">
-                  Learn more R
+                  Leer más <IoIosArrowForward />
                 </a>
               </div>
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
-            <div className="border border-light shadow-none mt-5 mt-lg-0 card">
-              <div className="border-0 bg-transparent card-header">
-                <div>
-                  <i className=" text-danger mr-1">r</i>
-                  <i className=" text-warning mr-1 ms-1">r</i>
-                  <i className=" text-success mr-1 ms-1">r</i>
-                </div>
-              </div>
-              <div className="bg-light card-body">
-                <div className="box-shadow">R</div>
-              </div>
+            <div data-aos="zoom-in" data-aos-duration="2500">
+              <CardFeature image_url="/images/marketing.jpg" />
             </div>
           </div>
         </div>
         <div className="row mt-5 pt-5">
           <div className="col-sm-8 col-lg-5">
-            <div className="border border-light shadow-none mt-5 mt-lg-0 card">
-              <div className="border-0 bg-transparent card-header">
-                <div>
-                  <i className=" text-danger mr-1">r</i>
-                  <i className=" text-warning mr-1 ms-1">r</i>
-                  <i className=" text-success mr-1 ms-1">r</i>
-                </div>
-              </div>
-              <div className="bg-light card-body">
-                <div className="box-shadow">R</div>
-              </div>
+            <div data-aos="zoom-in" data-aos-duration="2500">
+              <CardFeature image_url="/images/security.jpg" />
             </div>
           </div>
           <div className="ms-lg-auto col-lg-5">
             <div>
               <div className="avatar-md mb-4">
                 <span className="avatar-title rounded-circle bg-soft-primary">
-                  R
+                  <span className="color-primary">
+                    <MdOutlineSecurity className="icons-md" />
+                  </span>
                 </span>
               </div>
-              <h5>Improve your Marketing business</h5>
+              <h5>Mejore la seguridad de su negocio</h5>
               <p className="mb-4">
-                If several languages coalesce, the grammar of the resulting
-                language is more simple and regular.
+                Proteja su negocio y sus activos con nuestro servicio de
+                seguridad electrónica. Desde la vigilancia por video hasta el
+                monitoreo remoto, ofrecemos soluciones integrales diseñadas para
+                brindarle tranquilidad y protección.
               </p>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col">
                   <p>Donec quam felis</p>
                 </div>
                 <div className="col">
                   <p>Donec quam felis</p>
                 </div>
-              </div>
+              </div> */}
               <div className="mt-4">
                 <a href="/" className="btn btn-primary">
-                  Learn more R
+                  Leer más <IoIosArrowForward />
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 pt-5">
+          <div className="col-lg-5">
+            <div>
+              <div className="avatar-md mb-4">
+                <span className="avatar-title rounded-circle bg-soft-primary">
+                  <span className="color-primary">
+                    <IoServer className="icons-md" />
+                  </span>
+                </span>
+              </div>
+              <h5>Aumente la escalabilidad de su negocio </h5>
+              <p className="mb-4">
+                Prepare su negocio para el crecimiento futuro con nuestro
+                servicio de infraestructura tecnológica. Desde la implementación
+                de sistemas de nube hasta la optimización de redes, ofrecemos
+                soluciones flexibles y escalables diseñadas para adaptarse a las
+                necesidades cambiantes de su empresa.
+              </p>
+              {/* <div className="row">
+                <div className="col">
+                  <p>Donec quam felis</p>
+                </div>
+                <div className="col">
+                  <p>Donec quam felis</p>
+                </div>
+              </div> */}
+              <div className="mt-4">
+                <a href="/" className="btn btn-primary">
+                  Leer más <IoIosArrowForward />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="ms-lg-auto col-sm-8 col-lg-5">
+            <div data-aos="zoom-in" data-aos-duration="2500">
+              <CardFeature image_url="/images/server.jpg" />
             </div>
           </div>
         </div>

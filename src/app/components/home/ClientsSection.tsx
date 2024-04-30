@@ -1,3 +1,11 @@
+"use client";
+import { EmblaOptionsType } from "embla-carousel";
+import { Carousel } from "../ui/carrousel/Carrousel";
+
+const OPTIONS: EmblaOptionsType = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
 export const ClientsSection = () => {
   return (
     <section className="section bg-light" id="clients">
@@ -19,7 +27,7 @@ export const ClientsSection = () => {
         <div className="row">
           <div className="col-lg-12">
             <h5 className="mb-4">R 3,500 + Satisfied Client</h5>
-            {/* carrousel */}
+            <Carousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
         <div className="row mt-5">
