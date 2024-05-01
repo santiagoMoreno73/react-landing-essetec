@@ -15,13 +15,19 @@ export const HeroSection = () => {
                 DESCUBRA ESSETEC HOY
               </p>
               <h1 className="hero-title text-white mb-4">
+              {/* Convierte tu negocio en una experiencia tecnológica
+                sorprendente, única e innovadora.{" "} */}
                 Haga su negocio sorprendente y único{" "}
                 <span className="text-primary">ESSETEC</span>
+                <br />
+                <span className="text-white font-16">
+                  Especialistas en Seguridad Eletrónica & Tecnología
+                </span>
               </h1>
               <p className="text-white-50">
-                En Essetec nos comprometemos a ofrecer soluciones completas que
-                ayuden a nuestros clientes a prosperar en un entorno digital en
-                constante evolución.
+                Nos comprometemos a ofrecer soluciones completas que ayuden a
+                nuestros clientes a prosperar en un entorno digital en constante
+                evolución.
               </p>
               {/* <div>
                 <a href="/about" className="btn btn-primary mt-2 me-2">
