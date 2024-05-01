@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 // icons
-import { MdOutlineSecurity } from "react-icons/md";
+import { GiCctvCamera } from "react-icons/gi";
 import { IoServer } from "react-icons/io5";
 import { MdWeb } from "react-icons/md";
 
@@ -18,7 +18,7 @@ const services = [
       "Los sistemas de seguridad electrónica previenen pérdidas, controlan accesos no autorizados y permiten una respuesta rápida ante amenazas.",
     options: {
       color: "danger",
-      icon: <MdOutlineSecurity className="color-danger" />,
+      icon: <GiCctvCamera className="color-danger" />,
     },
   },
   {
