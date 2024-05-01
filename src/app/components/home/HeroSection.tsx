@@ -1,9 +1,15 @@
 export const HeroSection = () => {
   return (
-    <section id="#home" className="hero-section-5">
-      <div className="container">
+    <section id="#home">
+      <div className="hero-container">
+        <div className="hero-video">
+          <video autoPlay muted loop>
+            <source src="/video/video_essetec.mp4"></source>
+          </video>
+        </div>
         <div className="justify-content-center row">
           <div className="col-lg-8">
+            <div className="hero-content"></div>
             <div className="hero-wrapper text-center mb-4">
               <p className="font-16 text-uppercase text-white-50">
                 DESCUBRA ESSETEC HOY

@@ -221,6 +221,49 @@ p {
   border-radius: 20px;
 }
 
+.hero-container {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
 /*******************
     2.Helper
 *******************/
@@ -378,7 +421,6 @@ p {
 
 .hero-section-5 {
   padding: 300px 0px 220px 0px;
-  background: url("http://invoza.react.themesdesign.in/static/media/bg.38df4b94b060e11d77ae.jpg");
 }
 
 /******************
