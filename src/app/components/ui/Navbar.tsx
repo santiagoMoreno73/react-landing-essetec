@@ -50,10 +50,10 @@ export const Navbar = () => {
         <div className="container">
           <Link href="/" className="logo">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_main.png"
               alt="logo image"
-              width={70}
-              height={60}
+              width={80}
+              height={70}
               priority
             />
           </Link>
