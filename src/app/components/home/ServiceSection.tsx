@@ -48,7 +48,7 @@ export const ServiceSection = () => {
   }, []);
 
   return (
-    <section className="section bg-light" id="services">
+    <section className="section bg-custom-light" id="services">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">

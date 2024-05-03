@@ -11,7 +11,7 @@ export const CardFeature = ({ image_url }) => {
           <i className="mdi-circle bg-success mr-1 ms-1"></i>
         </div>
       </div>
-      <div className="bg-light card-body">
+      <div className="bg-custom-light card-body">
         <div className="box-shadow">
           <Image
             className="about-img"

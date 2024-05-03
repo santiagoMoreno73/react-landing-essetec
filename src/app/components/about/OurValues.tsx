@@ -29,7 +29,7 @@ const values = [
 
 export const OurValues = () => {
   return (
-    <section className="section bg-light" id="mision">
+    <section className="section bg-custom-light" id="mision">
       <div className="container">
         <div className="text-center mb-5">
           <h4 className="text-primary text-uppercase small-title">
