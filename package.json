@@ -17,6 +17,7 @@
     "embla-carousel-react": "8.0.1",
 		"embla-carousel": "8.0.1",
 		"embla-carousel-autoplay": "8.0.1",
+    "embla-carousel-class-names": "8.0.1",
     "framer-motion": "^11.1.7",
     "react-icons": "^5.0.1"
   },
