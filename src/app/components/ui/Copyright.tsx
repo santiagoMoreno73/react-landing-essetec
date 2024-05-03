@@ -7,15 +7,15 @@ export const Copyright = () => {
         <div className="row">
           <div className="col-lg-12">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_bl.png"
               alt="logo image"
-              width={70}
+              width={60}
               height={60}
               priority
             />
-            <div className="float-sm-end mt-4 mt-sm-0">
+            <div className="float-sm-end mt-3">
               <p className="copyright-desc text-white mb-0">
-                2024 © Invoza. Created by Themesdesign
+                2024 © Essetec. Hecho con el ❤️
               </p>
             </div>
           </div>
