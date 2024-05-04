@@ -1,6 +1,6 @@
 export const CardService = ({ service }) => {
   return (
-    <div className="card">
+    <div className="card mb-3">
       <div
         className={`card-background bg-custom-${service.options.color}`}
       ></div>
