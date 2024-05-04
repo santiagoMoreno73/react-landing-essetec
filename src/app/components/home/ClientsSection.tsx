@@ -32,7 +32,7 @@ const SLIDES = [
     alt: "carrousel img",
   },
   {
-    name: "carrousel-img-1",
+    name: "carrousel-img-6",
     src: "/images/carrousel/img-6.jpg",
     alt: "carrousel img",
   },
