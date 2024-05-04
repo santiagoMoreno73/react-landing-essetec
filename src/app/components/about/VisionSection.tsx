@@ -36,7 +36,7 @@ export const VisionSection = () => {
                 data-aos-duration="2500"
                 className="about-img"
                 src="/images/vision.jpg"
-                alt="logo image"
+                alt="vision image"
                 width={600}
                 height={420}
                 priority

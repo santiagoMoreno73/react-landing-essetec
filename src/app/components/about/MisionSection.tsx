@@ -12,7 +12,7 @@ export const MisionSection = () => {
                 data-aos-duration="2500"
                 className="about-img"
                 src="/images/mision.jpg"
-                alt="logo image"
+                alt="mision image"
                 width={600}
                 height={480}
                 priority
