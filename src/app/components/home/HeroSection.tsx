@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const HeroSection = () => {
   return (
     <section id="#home">
@@ -14,15 +16,21 @@ export const HeroSection = () => {
               <p className="font-16 text-uppercase text-white-50">
                 DESCUBRA ESSETEC HOY
               </p>
+              <Image
+                src="/images/logo_bl.png"
+                width={160}
+                height={160}
+                alt="icon"
+              />
               <h1 className="hero-title text-white mb-4">
-              {/* Convierte tu negocio en una experiencia tecnológica
+                {/* Convierte tu negocio en una experiencia tecnológica
                 sorprendente, única e innovadora.{" "} */}
                 Haga su negocio sorprendente y único{" "}
-                <span className="text-primary">ESSETEC</span>
+                {/* <span className="text-primary">ESSETEC</span> */}
                 <br />
-                <span className="text-white font-16">
+                {/* <span className="text-white font-16">
                   Especialistas en Seguridad Eletrónica & Tecnología
-                </span>
+                </span> */}
               </h1>
               <p className="text-white-50">
                 Nos comprometemos a ofrecer soluciones completas que ayuden a
