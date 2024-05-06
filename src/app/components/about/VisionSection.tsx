@@ -5,11 +5,7 @@ export const VisionSection = () => {
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-6">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="2500"
-              className="mb-5"
-            >
+            <div data-aos="fade-down" data-aos-duration="2500" className="mb-5">
               <h5 className="text-primary text-uppercase small-title">
                 Acerca de nosotros
               </h5>
@@ -34,7 +30,7 @@ export const VisionSection = () => {
               <Image
                 data-aos="fade-down"
                 data-aos-duration="2500"
-                className="about-img"
+                className="about-img img-fluid"
                 src="/images/vision.jpg"
                 alt="vision image"
                 width={600}

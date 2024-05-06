@@ -10,7 +10,7 @@ export const MisionSection = () => {
               <Image
                 data-aos="fade-down"
                 data-aos-duration="2500"
-                className="about-img"
+                className="about-img img-fluid"
                 src="/images/mision.jpg"
                 alt="mision image"
                 width={600}
@@ -20,7 +20,7 @@ export const MisionSection = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <div data-aos="fade-left" data-aos-duration="2500" className="mb-5">
+            <div data-aos="fade-down" data-aos-duration="2500" className="mb-5">
               <h5 className="text-primary text-uppercase small-title">
                 Acerca de nosotros
               </h5>

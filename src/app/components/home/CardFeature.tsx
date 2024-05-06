@@ -14,7 +14,7 @@ export const CardFeature = ({ image_url }) => {
       <div className="bg-custom-light card-body">
         <div className="box-shadow">
           <Image
-            className="about-img"
+            className="about-img img-fluid"
             src={image_url}
             alt="vision image"
             width={500}
