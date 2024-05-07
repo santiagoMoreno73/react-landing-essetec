@@ -13,9 +13,6 @@ export const HeroSection = () => {
           <div className="col-lg-8">
             <div className="hero-content"></div>
             <div className="hero-wrapper text-center mb-4">
-              <p className="font-16 text-uppercase text-white-50">
-                DESCUBRA ESSETEC HOY
-              </p>
               <Image
                 src="/images/logo_bl.png"
                 width={160}
@@ -25,7 +22,8 @@ export const HeroSection = () => {
               <h1 className="hero-title text-white mb-4">
                 {/* Convierte tu negocio en una experiencia tecnológica
                 sorprendente, única e innovadora.{" "} */}
-                Haga su negocio sorprendente y único{" "}
+                Convierte tu negocio en una experiencia tecnológica
+                sorprendente, única e innovadora.{" "}
                 {/* <span className="text-primary">ESSETEC</span> */}
                 <br />
                 {/* <span className="text-white font-16">
@@ -33,9 +31,9 @@ export const HeroSection = () => {
                 </span> */}
               </h1>
               <p className="text-white-50">
-                Nos comprometemos a ofrecer soluciones completas que ayuden a
+                {/* Nos comprometemos a ofrecer soluciones completas que ayuden a
                 nuestros clientes a prosperar en un entorno digital en constante
-                evolución.
+                evolución. */}
               </p>
               {/* <div>
                 <a href="/about" className="btn btn-primary mt-2 me-2">

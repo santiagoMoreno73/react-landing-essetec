@@ -5,10 +5,6 @@ import { GiCctvCamera } from "react-icons/gi";
 import { IoServer } from "react-icons/io5";
 import { MdWeb } from "react-icons/md";
 
-// import AOS
-import Aos from "aos";
-import "aos/dist/aos.css";
-
 import { CardService } from "./CardService";
 
 const services = [
@@ -42,11 +38,6 @@ const services = [
 ];
 
 export const ServiceSection = () => {
-  // useEffect to set animation duration
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
     <section className="section bg-custom-light" id="services">
       <div className="container">
@@ -68,12 +59,7 @@ export const ServiceSection = () => {
         </div>
         <div className="row">
           {services.map((service, index) => (
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-duration="2500"
-              className="col-lg-4 col-md-6"
-            >
+            <div key={index} className="col-lg-4 col-md-6">
               <CardService service={service} />
             </div>
           ))}

@@ -5,10 +5,10 @@ export const VisionSection = () => {
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-6">
-            <div data-aos="fade-down" data-aos-duration="2500" className="mb-5">
-              <h5 className="text-primary text-uppercase small-title">
+            <div className="mb-5">
+              {/* <h5 className="text-primary text-uppercase small-title">
                 Acerca de nosotros
-              </h5>
+              </h5> */}
               <h4 className="mb-3">Visión</h4>
               <p>
                 Ser reconocidos como líderes en soluciones integrales de
@@ -28,14 +28,13 @@ export const VisionSection = () => {
           <div className="col-lg-6">
             <div className="text-center mb-5">
               <Image
-                data-aos="fade-down"
-                data-aos-duration="2500"
-                className="about-img img-fluid"
+                className="img-radius img-fluid"
                 src="/images/vision.jpg"
                 alt="vision image"
-                width={600}
-                height={420}
-                priority
+                width={0}
+                height={0}
+                layout="responsive"
+                objectFit="contain"
               />
             </div>
           </div>

@@ -58,7 +58,7 @@ export const FeaturesSection = () => {
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
-            <div data-aos="zoom-in" data-aos-duration="2500">
+            <div>
               <CardFeature image_url="/images/server.jpg" />
             </div>
           </div>
@@ -94,7 +94,7 @@ export const FeaturesSection = () => {
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
-            <div data-aos="zoom-in" data-aos-duration="2500">
+            <div>
               <CardFeature image_url="/images/camera.jpg" />
             </div>
           </div>
@@ -131,7 +131,7 @@ export const FeaturesSection = () => {
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
-            <div data-aos="zoom-in" data-aos-duration="2500">
+            <div>
               <CardFeature image_url="/images/marketing.jpg" />
             </div>
           </div>
