@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
-
 import { BaseLayout } from "../components/layouts";
 
-const AboutPage: NextPage = () => {
+const ServicePage: NextPage = () => {
   return (
     <BaseLayout>
       <h1>Hola a servicios</h1>
@@ -10,4 +9,4 @@ const AboutPage: NextPage = () => {
   );
 };
 
-export default AboutPage;
+export default ServicePage;
