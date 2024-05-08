@@ -1,16 +1,25 @@
 import type { NextPage } from "next";
-import { BaseLayout } from "../components/layouts";
-import { MisionSection, VisionSection, OurValues } from "../components/about";
-import { HeroSection } from "../components/home/HeroSection";
+import {
+  HeroSection,
+  MisionSection,
+  VisionSection,
+  OurValues,
+} from "../components/about";
 
 const AboutPage: NextPage = () => {
   return (
-    <BaseLayout>
+    <>
       <HeroSection></HeroSection>
+
+      <section className="section" id="mision">
+        <div className="container">
+          <MisionSection></MisionSection>
+          <VisionSection></VisionSection>
+        </div>
+      </section>
+
       <OurValues></OurValues>
-      <MisionSection></MisionSection>
-      <VisionSection></VisionSection>
-    </BaseLayout>
+    </>
   );
 };
 
