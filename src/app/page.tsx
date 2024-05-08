@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 
-import { BaseLayout } from "./components/layouts";
 import {
   ServiceSection,
   HeroSection,
   FeaturesSection,
   ClientsSection,
   SolutionSection,
+  SubscribeSection,
 } from "./components/home";
 
 export const metadata = {
@@ -17,14 +17,14 @@ export const metadata = {
 
 const Home: NextPage = () => {
   return (
-    <BaseLayout>
+    <>
       <HeroSection />
       <ServiceSection />
       <FeaturesSection />
       <SolutionSection />
       <ClientsSection />
       {/* <SubscribeSection /> */}
-    </BaseLayout>
+    </>
   );
 };
 
