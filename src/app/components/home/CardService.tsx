@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const CardService = ({ service }) => {
   return (
     <div className="card mb-3">
@@ -13,9 +15,12 @@ export const CardService = ({ service }) => {
         <h5 className="card-title text-center">{service.title}</h5>
         <p className="card-text text-center">{service.description}</p>
         <div className="text-center m-4">
-          <a className={`card-btn bg-custom-${service.options.color}`} href="/">
+          <Link
+            className={`card-btn bg-custom-${service.options.color}`}
+            href={service.options.href}
+          >
             Ver más
-          </a>
+          </Link>
           {/* <a className={`btn btn-primary`} href="/">
             Ver más
           </a> */}
