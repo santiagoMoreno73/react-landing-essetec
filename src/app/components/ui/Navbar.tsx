@@ -12,7 +12,7 @@ import { FaGripLines } from "react-icons/fa";
 
 const navLinks = [
   { title: "Inicio", path: "/" },
-  { title: "Servicios", path: "#services" },
+  { title: "Servicios", path: "/services" },
   { title: "Carácteristicas", path: "#features" },
   { title: "Clientes", path: "#clients" },
   { title: "Acerca de nosotros", path: "/about" },

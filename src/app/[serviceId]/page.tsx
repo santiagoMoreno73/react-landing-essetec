@@ -21,7 +21,7 @@ const services = [
       "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
   },
   {
-    id: "infraestructure",
+    id: "infrastructure",
     name: "Infraestructura",
     title: "Infraestructura",
     subtitle: "Infraestructura",
