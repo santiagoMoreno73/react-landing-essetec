@@ -1,6 +1,6 @@
 "use client";
 import { EmblaOptionsType } from "embla-carousel";
-import { Carousel } from "../ui/carrousel/Carrousel";
+import { Carousel } from "../ui/Carrousel/Carrousel";
 import { IoMdRibbon } from "react-icons/io";
 import Image from "next/image";
 

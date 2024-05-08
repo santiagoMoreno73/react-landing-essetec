@@ -1,36 +1,35 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
 export const HeroSection = () => {
   return (
     <section id="#home">
       <div className="hero-container">
         <div className="hero-video">
-          <video autoPlay muted loop>
-            <source src="/video/video_essetec.mp4"></source>
-          </video>
+          <Suspense fallback={<p>Loading video...</p>}>
+            <video autoPlay muted loop>
+              <source src="/video/video_essetec.mp4"></source>
+            </video>
+          </Suspense>
         </div>
         <div className="justify-content-center row">
           <div className="col-lg-8">
             <div className="hero-content"></div>
             <div className="hero-wrapper text-center mb-4">
               <Image
-                src="/images/logo_bl.png"
-                width={160}
-                height={160}
+                src="/images/logo_bl2.png"
+                width={330}
+                height={380}
                 alt="icon"
               />
               <h1 className="hero-title text-white mb-4">
-                {/* Convierte tu negocio en una experiencia tecnológica
-                sorprendente, única e innovadora.{" "} */}
-                Convierte tu negocio en una experiencia tecnológica
-                sorprendente, única e innovadora.{" "}
-                {/* <span className="text-primary">ESSETEC</span> */}
-                <br />
-                {/* <span className="text-white font-16">
-                  Especialistas en Seguridad Eletrónica & Tecnología
-                </span> */}
+                <span className="font-24">
+                  <b>ESPECIALISTAS EN SEGURIDAD ELECTRONICA & TECNOLOGIA</b>
+                </span>
               </h1>
-              <p className="text-white-50">
+              <p className="font-20">
+                Convierte tu negocio en una experiencia <br />
+                tecnológica sorprendente, única e innovadora.
                 {/* Nos comprometemos a ofrecer soluciones completas que ayuden a
                 nuestros clientes a prosperar en un entorno digital en constante
                 evolución. */}

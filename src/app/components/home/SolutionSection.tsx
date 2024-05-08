@@ -2,48 +2,29 @@ export const SolutionSection = () => {
   return (
     <section className="section bg-primary" id="solutions">
       <div className="container">
-        <div className="row justify-content-center mb-5">
-          <div className="col-lg-7">
-            <div className="text-center text-white-50">
-              <h4 className="text-white">Best Solutions for your Business</h4>
-              <p>
-                To achieve this, it would be necessary to have uniform grammar,
-                pronunciation and more common that of the individual languages.
-              </p>
-            </div>
-          </div>
-        </div>
         <div className="row" id="counter">
-          <div className="col-sm-6 col-xl-3">
+          <div className="col-sm-6 col-xl-4">
             <div className="text-center mt-4">
               <h2 className="counter-value text-white mt-4">
-                <span>2,581</span>
+                <span>14</span>
               </h2>
-              <p className="font-16 text-white-50">Projects</p>
+              <p className="font-16 text-white-50">Años de experiencia</p>
             </div>
           </div>
-          <div className="col-sm-6 col-xl-3">
+          <div className="col-sm-6 col-xl-4">
             <div className="text-center mt-4">
               <h2 className="counter-value text-white mt-4">
-                <span>800</span>
+                <span>100%</span>
               </h2>
-              <p className="font-16 text-white-50">No. of Clients</p>
+              <p className="font-16 text-white-50">Confiabilidad</p>
             </div>
           </div>
-          <div className="col-sm-6 col-xl-3">
+          <div className="col-sm-6 col-xl-4">
             <div className="text-center mt-4">
               <h2 className="counter-value text-white mt-4">
-                <span>128</span>
+                <span>100%</span>
               </h2>
-              <p className="font-16 text-white-50">Cups of coffee</p>
-            </div>
-          </div>
-          <div className="col-sm-6 col-xl-3">
-            <div className="text-center mt-4">
-              <h2 className="counter-value text-white mt-4">
-                <span>47</span>
-              </h2>
-              <p className="font-16 text-white-50">Awards</p>
+              <p className="font-16 text-white-50">Dedicación</p>
             </div>
           </div>
         </div>
