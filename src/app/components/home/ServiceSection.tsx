@@ -15,6 +15,7 @@ const services = [
     options: {
       color: "danger",
       icon: <GiCctvCamera className="color-danger" />,
+      href: "/security",
     },
   },
   {
@@ -24,6 +25,7 @@ const services = [
     options: {
       color: "success",
       icon: <IoServer className="color-success" />,
+      href: "/infrastructure",
     },
   },
   {
@@ -33,6 +35,7 @@ const services = [
     options: {
       color: "warning",
       icon: <MdWeb className="color-warning" />,
+      href: "/web",
     },
   },
 ];
