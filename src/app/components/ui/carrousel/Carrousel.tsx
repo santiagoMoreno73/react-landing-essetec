@@ -5,14 +5,14 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
 import useEmblaCarousel from "embla-carousel-react";
+
+import "./Carrousel.css";
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons,
 } from "./CarrouselArrowButton";
 import { DotButton, useDotButton } from "./CarrouselDotButton";
-
-import "../carrousel/carrousel.css";
 
 type PropType = {
   slides: any[];
