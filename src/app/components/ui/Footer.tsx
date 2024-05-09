@@ -67,7 +67,7 @@ export const Footer = () => {
               <div className="d-flex align-items-center">
                 <Image
                   src="/images/emojis/CEO.png"
-                  alt="logo image"
+                  alt="CEO emoji"
                   width={70}
                   height={70}
                   priority
@@ -79,7 +79,7 @@ export const Footer = () => {
               <div className="d-flex align-items-center">
                 <Image
                   src="/images/emojis/CFO.png"
-                  alt="logo image"
+                  alt="CFO emoji"
                   width={70}
                   height={70}
                   priority
