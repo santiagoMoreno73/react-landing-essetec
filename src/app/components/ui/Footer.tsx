@@ -63,31 +63,26 @@ export const Footer = () => {
             <h5 className="footer-list-title mb-4">
               Contacto (+57 3202063747)
             </h5>
-            <div>
-              <div className="d-flex align-items-center">
-                <Image
-                  src="/images/emojis/CEO.png"
-                  alt="CEO emoji"
-                  width={70}
-                  height={70}
-                  priority
-                />
-                <div className="">
-                  <p>CEO - Ing. Daniel Alfonso Sánchez</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <Image
-                  src="/images/emojis/CFO.png"
-                  alt="CFO emoji"
-                  width={70}
-                  height={70}
-                  priority
-                />
-                <div className="media-body">
-                  <p>CFO - C.P. Erika Coji</p>
-                </div>
-              </div>
+
+            <div className="d-flex align-items-center">
+              <Image
+                src="/images/emojis/CEO.png"
+                alt="CEO emoji"
+                width={70}
+                height={70}
+                priority
+              />
+              <p>CEO - Ing. Daniel Alfonso Sánchez</p>
+            </div>
+            <div className="d-flex align-items-center">
+              <Image
+                src="/images/emojis/CFO.png"
+                alt="CFO emoji"
+                width={70}
+                height={70}
+                priority
+              />
+              <p>CFO - C.P. Erika Coji</p>
             </div>
           </div>
         </div>
