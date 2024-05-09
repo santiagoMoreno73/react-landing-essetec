@@ -65,11 +65,9 @@ export default function ServiceDetail({ params }) {
               </h5>
               <h4 className="mb-3">Explora Nuestros Servicios</h4>
               <p>
-                Descubre una amplia gama de servicios diseñados para satisfacer
-                tus necesidades. <br />
-                Desde desarrollo web hasta consultoría en tecnología, nuestro
-                equipo está aquí para brindarte soluciones eficientes y
-                personalizadas.
+                Diseñados para satisfacer tus necesidades. Desde desarrollo web
+                hasta consultoría en tecnología, nuestro equipo está aquí para
+                brindarte soluciones eficientes y personalizadas.
               </p>
             </div>
 
@@ -93,6 +91,15 @@ export default function ServiceDetail({ params }) {
             </div>
             <div className="col-lg-8">
               <div className="mb-5">
+                <h4>{currentService.title}</h4>
+                <h6>{currentService.subtitle}</h6>
+
+                <p>
+                  Los sistemas de seguridad electrónica ayudan a prevenir
+                  pérdidas, controlan los accesos no autorizados y mejoran la
+                  capacidad de reacción para evitar o mitigar las amenazas que
+                  puedan surgir.
+                </p>
                 <Image
                   className="img-radius img-fluid"
                   src="/images/services2.jpg"
@@ -102,9 +109,6 @@ export default function ServiceDetail({ params }) {
                   layout="responsive"
                   objectFit="contain"
                 />
-
-                <h4>{currentService.title}</h4>
-                <h6>{currentService.subtitle}</h6>
               </div>
             </div>
           </div>
