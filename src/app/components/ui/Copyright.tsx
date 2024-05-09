@@ -1,22 +1,24 @@
 import Image from "next/image";
-
+import { FaFacebook } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 export const Copyright = () => {
   return (
-    <section className="bg-primary py-3">
+    <section className="bg-primary p-3">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
-            <Image
-              src="/images/logo_bl.png"
-              alt="logo image"
-              width={60}
-              height={60}
-              priority
-            />
-            <div className="float-sm-end mt-3">
-              <p className="copyright-desc text-white mb-0">
-                2024 © Essetec. Hecho con el ❤️
+          <div className="col-sm-12 col-lg-6">
+            <div className="float-sm-start">
+              <p className="text-white mb-0">
+                © 2024 Essetec. Orgullosamente hecho en LATAM
               </p>
+            </div>
+          </div>
+          <div className="col-sm-12 col-lg-6">
+            <div className="float-sm-end">
+              <FaLinkedinIn className="footer-icons" />
+              <FaFacebook className="footer-icons" />
+              <FaInstagram className="footer-icons" />
             </div>
           </div>
         </div>
