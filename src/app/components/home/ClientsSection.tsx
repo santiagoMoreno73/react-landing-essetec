@@ -41,7 +41,7 @@ const SLIDES = [
 const CLIENTS = [
   {
     name: "client-1",
-    src: "/images/clients/client-1.jpeg",
+    src: "/images/logos/clients/client-1.jpeg",
   },
 ];
 
