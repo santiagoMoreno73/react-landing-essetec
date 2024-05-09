@@ -60,14 +60,14 @@ export const Navbar = () => {
 
           {!navOpen ? (
             <button onClick={() => setNavOpen(true)} className="navbar-toggler">
-              <IoMdClose />
+              <FaGripLines />
             </button>
           ) : (
             <button
               onClick={() => setNavOpen(false)}
               className="navbar-toggler"
             >
-              <FaGripLines />
+              <IoMdClose />
             </button>
           )}
 

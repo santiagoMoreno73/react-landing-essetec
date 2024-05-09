@@ -195,6 +195,11 @@ p {
   height: 80vh;
 }
 
+.hero-logo {
+  width: 330px;
+  height: 380px;
+}
+
 .hero-video {
   position: absolute;
   top: 0;
@@ -301,6 +306,9 @@ p {
 /******************
     3.Navbar
 *******************/
+.collapse {
+  margin: 12px 0px;
+}
 .navbar-custom {
   padding: 20px 0px;
   width: 100%;
@@ -527,6 +535,11 @@ p {
 }
 
 @media (max-width: 767.98px) {
+  .hero-logo {
+    width: 230px;
+    height: 280px;
+  }
+
   .hero-title {
     font-size: 32px;
   }
