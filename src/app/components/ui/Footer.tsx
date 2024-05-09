@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -6,82 +7,90 @@ export const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-6 col-lg-4">
-            <div>
-              <h5 className="mb-4 footer-list-title">About the Invoza</h5>
-              <p className="">
-                The Invoza is a sed ut perspiciatis unde omnis iste natus error
-                sit voluptatem accusantium doloremque rem eaque
+            <div className="text-center">
+              <Image
+                src="/images/logos/logo_bl2.png"
+                alt="logo image"
+                width={90}
+                height={100}
+                priority
+              />
+              <p className="mt-4">
+                Convierte tu negocio en una experiencia tecnológica
+                sorprendente, única e innovadora.
               </p>
             </div>
           </div>
           <div className="col-sm-6 col-lg-2 offset-lg-1">
             <div>
-              <h5 className="mb-4 footer-list-title">Company</h5>
+              <h5 className="mb-4 footer-list-title">Compañia</h5>
               <ul className="list-unstyled footer-list-menu">
                 <li>
-                  <a href="/">About Us</a>
+                  <Link href="/about">Acerca de nosotros</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="mb-4 footer-list-title">Legal</h5>
+              <ul className="list-unstyled footer-list-menu">
+                <li>
+                  <Link href="/about">Terminos</Link>
                 </li>
                 <li>
-                  <a href="/">Media</a>
-                </li>
-                <li>
-                  <a href="/">Career</a>
+                  <Link href="/about">Privacidad</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-sm-6 col-lg-2">
             <div>
-              <h5 className="footer-list-title mb-4">More Info</h5>
+              <h5 className="footer-list-title mb-4">Más información</h5>
               <ul className="list-unstyled footer-list-menu">
                 <li>
-                  <a href="/">Pricing</a>
+                  <Link href="/services">Servicios</Link>
                 </li>
                 <li>
-                  <a href="/">For marketing</a>
+                  <Link href="#features">Caráteristicas</Link>
                 </li>
                 <li>
-                  <a href="/"> For Ceos</a>
-                </li>
-                <li>
-                  <a href="/">For Agencies</a>
-                </li>
-                <li>
-                  <a href="/">Our Apps</a>
+                  <Link href="#clients">Clientes</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-sm-6 col-lg-3">
-            <h5 className="footer-list-title mb-4">Company</h5>
+            <h5 className="footer-list-title mb-4">
+              Contacto (+57 3202063747)
+            </h5>
             <div>
-              <div className="media">
-                R{" "}
-                <div className="media-body">
-                  <p>476 University Drive Ridge, IL 61257</p>
+              <div className="d-flex align-items-center">
+                <Image
+                  src="/images/emojis/CEO.png"
+                  alt="logo image"
+                  width={70}
+                  height={70}
+                  priority
+                />
+                <div className="">
+                  <p>CEO - Ing. Daniel Alfonso Sánchez</p>
                 </div>
               </div>
-              <div className="media">
-                R{" "}
+              <div className="d-flex align-items-center">
+                <Image
+                  src="/images/emojis/CFO.png"
+                  alt="logo image"
+                  width={70}
+                  height={70}
+                  priority
+                />
                 <div className="media-body">
-                  <p>476 University Drive Ridge, IL 61257</p>
-                </div>
-              </div>
-              <div className="media">
-                R{" "}
-                <div className="media-body">
-                  <p>476 University Drive Ridge, IL 61257</p>
+                  <p>CFO - C.P. Erika Coji</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* <div className="row mt-4">
-          <div className="text-center">
-            <p className="text-white mb-0">2024 © ESSETEC. Created by ❤️</p>
-          </div>
-        </div> */}
       </div>
     </section>
   );

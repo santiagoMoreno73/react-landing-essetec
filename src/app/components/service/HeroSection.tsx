@@ -9,7 +9,7 @@ export const HeroSection = () => {
             <div className="hero-content-about"></div>
             <div className="hero-wrapper-about text-center mb-4">
               <Image
-                src="/images/logo_bl.png"
+                src="/images/logos/logo_bl.png"
                 width={360}
                 height={360}
                 alt="icon"
