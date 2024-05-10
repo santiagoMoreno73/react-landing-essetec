@@ -195,9 +195,8 @@ p {
   height: 80vh;
 }
 
-.hero-logo {
-  width: 330px;
-  height: 380px;
+.hero-image {
+  height: 80vh;
 }
 
 .hero-video {
@@ -502,9 +501,12 @@ p {
 }
 
 @media (max-width: 767.98px) {
-  .hero-logo {
-    width: 230px;
-    height: 280px;
+  .hero-container {
+    height: 100vh;
+  }
+
+  .hero-image {
+    height: 100vh;
   }
 
   .hero-title {

@@ -26,11 +26,11 @@ export const HeroSection = ({
           </div>
         ) : (
           <div
+            className="hero-image"
             style={{
               background: `url(${imgUrl})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "80vh",
             }}
           ></div>
         )}
