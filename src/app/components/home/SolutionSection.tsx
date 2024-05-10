@@ -2,45 +2,63 @@ import { FaChartLine } from "react-icons/fa";
 import { FaClipboardCheck } from "react-icons/fa";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { MdCoffee } from "react-icons/md";
+import { Counter } from "../ui";
+import { useReducedMotion } from "../../hooks";
 
-export const solutions = [
+const SOLUTIONS = [
   {
     id: 0,
-    title: "+14",
+    number: 14,
+    symbol: "+",
     subtitle: "Años de experiencia",
     icon: <FaRegThumbsUp className="icons-lg color-success " />,
   },
   {
     id: 1,
-    title: "+200",
+    number: 200,
+    symbol: "+",
     subtitle: "Tazas de café",
     icon: <MdCoffee className="icons-lg color-success " />,
   },
   {
     id: 2,
-    title: "100%",
+    number: 100,
+    symbol: "%",
     subtitle: "Confiabilidad",
     icon: <FaClipboardCheck className="icons-lg color-success" />,
   },
   {
     id: 3,
-    title: "100%",
+    number: 100,
+    symbol: "%",
     subtitle: "Dedicación",
     icon: <FaChartLine className="icons-lg color-success" />,
   },
 ];
 
 export const SolutionSection = () => {
+  const reduceMotion = false;
+
   return (
     <section className="section bg-primary" id="solutions">
       <div className="container">
         <div className="row" id="counter">
-          {solutions.map((solution, index) => (
+          {SOLUTIONS.map((solution, index) => (
             <div className="col-sm-6 col-xl-3" key={index}>
               <div className="text-center mt-4">
                 {solution.icon}
                 <h2 className="counter-value text-white mt-4">
-                  <span>{solution.title}</span>
+                  {reduceMotion ? (
+                    <>
+                      <span>{solution.number}</span>
+                      <span>{solution.symbol}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Counter from={0} to={solution.number} duration={4} />
+                      <span>{solution.symbol}</span>
+                    </>
+                  )}
                 </h2>
                 <p className="font-16 text-white-50">{solution.subtitle}</p>
               </div>
