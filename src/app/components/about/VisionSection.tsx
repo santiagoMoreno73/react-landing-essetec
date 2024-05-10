@@ -29,10 +29,8 @@ export const VisionSection = () => {
             className="img-radius img-fluid"
             src="/images/vision.jpg"
             alt="vision image"
-            width={0}
-            height={0}
-            layout="responsive"
-            objectFit="contain"
+            width={600}
+            height={500}
           />
         </div>
       </div>
