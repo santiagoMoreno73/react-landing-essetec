@@ -8,9 +8,9 @@ import { NavLink } from "./NavLink";
 import { useState, useEffect } from "react";
 // icons
 import { IoMdClose } from "react-icons/io";
-import { FaGripLines } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-const navLinks = [
+const NAVLINKS = [
   { title: "Inicio", path: "/" },
   { title: "Servicios", path: "/services" },
   { title: "Carácteristicas", path: "#features" },
@@ -59,34 +59,41 @@ export const Navbar = () => {
           </Link>
 
           {!navOpen ? (
-            <button onClick={() => setNavOpen(true)} className="navbar-toggler">
-              <FaGripLines />
+            <button
+              onClick={() => setNavOpen(true)}
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <GiHamburgerMenu />
             </button>
           ) : (
             <button
               onClick={() => setNavOpen(false)}
               className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
               <IoMdClose />
             </button>
           )}
 
-          <div
-            id="navbarCollapse"
-            className={
-              navOpen
-                ? "collapse show navbar-collapse"
-                : "collapse navbar-collapse"
-            }
-          >
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="ms-auto navbar-center navbar-nav">
-              {navLinks.map((link, index) => (
+              {NAVLINKS.map((link, index) => (
                 <li key={index} className="nav-item">
                   <NavLink href={link.path} title={link.title} />
                 </li>
               ))}
             </ul>
-            {/* <button className="btn btn-rounded navbar-btn">Try for free</button> */}
           </div>
         </div>
       </nav>
