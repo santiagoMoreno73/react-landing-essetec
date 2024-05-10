@@ -1,7 +1,8 @@
-import React from "react";
-import { EmblaOptionsType } from "embla-carousel";
-
+"use client";
+import { FC } from "react";
 import Image from "next/image";
+
+import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
 import useEmblaCarousel from "embla-carousel-react";
@@ -19,7 +20,7 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
-export const Carousel: React.FC<PropType> = (props) => {
+export const Carrousel: FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     ClassNames(),
