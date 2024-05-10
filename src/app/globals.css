@@ -238,36 +238,6 @@ p {
   z-index: 2;
 }
 
-.hero-container-services {
-  background: url("../../public/images/about_us2.jpg");
-  background-size: cover;
-  height: 80vh;
-}
-
-.hero-container-about {
-  background: url("../../public/images/about_us.jpg");
-  background-size: cover;
-  height: 80vh;
-}
-
-.hero-content-about {
-  background: rgba(0, 0, 0, 0.5);
-  height: 80%;
-  width: 100%;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hero-wrapper-about {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
 /*******************
     2.Helper
 *******************/
@@ -306,9 +276,6 @@ p {
 /******************
     3.Navbar
 *******************/
-.collapse {
-  margin: 12px 0px;
-}
 .navbar-custom {
   padding: 20px 0px;
   width: 100%;
