@@ -1,6 +1,6 @@
 "use client";
 import { EmblaOptionsType } from "embla-carousel";
-import { Carousel } from "../ui/Carrousel/Carrousel";
+import { Carrousel } from "../ui/Carrousel/Carrousel";
 import Image from "next/image";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -67,7 +67,7 @@ export const ClientsSection = () => {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <Carousel slides={SLIDES} options={OPTIONS} />
+            <Carrousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
         <div className="row mt-5">
