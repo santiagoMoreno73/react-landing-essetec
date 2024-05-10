@@ -1,7 +1,11 @@
 "use client";
 import Image from "next/image";
 
-export const CardFeature = ({ image_url }) => {
+type CardFeatureProps = {
+  image_url: string;
+};
+
+export const CardFeature = ({ image_url }: CardFeatureProps) => {
   return (
     <div className="border border-light shadow-none mt-5 mt-lg-0 card">
       <div className="border-0 bg-transparent card-header">

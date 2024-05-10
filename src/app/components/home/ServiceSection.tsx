@@ -7,7 +7,7 @@ import { MdWeb } from "react-icons/md";
 
 import { CardService } from "./CardService";
 
-const services = [
+const SERVICES = [
   {
     title: "Seguridad electrónica",
     description:
@@ -61,9 +61,13 @@ export const ServiceSection = () => {
           </div>
         </div>
         <div className="row">
-          {services.map((service, index) => (
+          {SERVICES.map(({ title, description, options }, index) => (
             <div key={index} className="col-lg-4 col-md-6">
-              <CardService service={service} />
+              <CardService
+                title={title}
+                description={description}
+                options={options}
+              />
             </div>
           ))}
         </div>
