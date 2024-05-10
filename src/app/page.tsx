@@ -5,7 +5,6 @@ import {
   FeaturesSection,
   ClientsSection,
   SolutionSection,
-  SubscribeSection,
 } from "./components/home";
 import { HeroSection } from "./components/ui";
 
