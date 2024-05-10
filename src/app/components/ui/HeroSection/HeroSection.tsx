@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import "./HeroSection.css";
 
 type HeroSectionProps = {
   title?: string;
