@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 // icons
 import { IoMdClose } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
+// css
+import "./Navbar.css";
 
 const NAVLINKS = [
   { title: "Inicio", path: "/" },
