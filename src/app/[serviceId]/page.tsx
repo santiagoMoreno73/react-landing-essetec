@@ -78,7 +78,7 @@ export default function ServiceDetail({ params }) {
               />
               <div className="mb-5">
                 <Image
-                  className="img-radius img-fluid"
+                  className="img-radius-20 img-fluid"
                   src="/images/services.jpg"
                   alt="Call center image"
                   width={400}
@@ -100,7 +100,7 @@ export default function ServiceDetail({ params }) {
                 </p>
 
                 <Image
-                  className="img-radius img-fluid"
+                  className="img-radius-20 img-fluid"
                   src="/images/services2.jpg"
                   alt="Office image"
                   width={400}

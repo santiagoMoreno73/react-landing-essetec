@@ -35,7 +35,7 @@ export const CardFeature = ({ position, image_url }: CardFeatureProps) => {
       <div className="bg-custom-light card-body">
         <div className="box-shadow">
           <Image
-            className="img-radius img-fluid"
+            className="img-radius-20 img-fluid"
             src={image_url}
             alt="feature image"
             width={500}

@@ -19,7 +19,7 @@ export const MisionSection = () => {
       <div className="col-lg-6">
         <div className="text-center mb-5">
           <Image
-            className="img-radius img-fluid"
+            className="img-radius-20 img-fluid"
             src="/images/mision.jpg"
             alt="mision image"
             width={600}

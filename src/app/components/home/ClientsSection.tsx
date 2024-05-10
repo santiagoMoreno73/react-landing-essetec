@@ -73,15 +73,14 @@ export const ClientsSection = () => {
         <div className="row mt-5">
           {CLIENTS.map((client, index) => (
             <div className="col text-center" key={index}>
-              <div className="client-image">
-                <Image
-                  src={client.src}
-                  alt="logo client"
-                  width={160}
-                  height={100}
-                  priority
-                />
-              </div>
+              <Image
+                className="img-opacity img-radius-20"
+                src={client.src}
+                alt="logo client"
+                width={160}
+                height={100}
+                priority
+              />
             </div>
           ))}
         </div>

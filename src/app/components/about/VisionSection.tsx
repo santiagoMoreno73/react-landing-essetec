@@ -26,7 +26,7 @@ export const VisionSection = () => {
       <div className="col-lg-6">
         <div className="text-center mb-5">
           <Image
-            className="img-radius img-fluid"
+            className="img-radius-20 img-fluid"
             src="/images/vision.jpg"
             alt="vision image"
             width={600}
