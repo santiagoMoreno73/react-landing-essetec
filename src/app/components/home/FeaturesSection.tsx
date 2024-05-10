@@ -1,7 +1,8 @@
 "use client";
+// component
 import { CardFeature } from "./CardFeature";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoMdTrendingUp } from "react-icons/io";
+// icons
+import { IoIosArrowForward, IoMdTrendingUp } from "react-icons/io";
 import { IoServer } from "react-icons/io5";
 import { GiCctvCamera } from "react-icons/gi";
 
@@ -44,13 +45,13 @@ export const FeaturesSection = () => {
               necesidades cambiantes de su empresa.
             </p>
             {/* <div className="row">
-                <div className="col">
-                  <p>Donec quam felis</p>
-                </div>
-                <div className="col">
-                  <p>Donec quam felis</p>
-                </div>
-              </div> */}
+              <div className="col">
+                <p>Donec quam felis</p>
+              </div>
+              <div className="col">
+                <p>Donec quam felis</p>
+              </div>
+            </div> */}
             <div className="mt-4">
               <a href="/" className="btn btn-primary">
                 Leer más <IoIosArrowForward />
@@ -59,7 +60,7 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature image_url="/images/server.jpg" />
+              <CardFeature position={1} image_url="/images/server.jpg" />
             </div>
           </div>
         </div>
@@ -95,7 +96,7 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature image_url="/images/camera.jpg" />
+              <CardFeature position={2} image_url="/images/camera.jpg" />
             </div>
           </div>
         </div>
@@ -132,7 +133,7 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature image_url="/images/marketing.jpg" />
+              <CardFeature position={3} image_url="/images/marketing.jpg" />
             </div>
           </div>
         </div>

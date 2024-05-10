@@ -1,13 +1,30 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type CardFeatureProps = {
+  position: number;
   image_url: string;
 };
 
-export const CardFeature = ({ image_url }: CardFeatureProps) => {
+export const CardFeature = ({ position, image_url }: CardFeatureProps) => {
   return (
-    <div className="border border-light shadow-none mt-5 mt-lg-0 card">
+    <motion.div
+      initial={{
+        opacity: 0,
+        // if odd index card,slide from right instead of left
+        y: 50,
+      }}
+      viewport={{ once: true }}
+      whileInView={{
+        opacity: 1,
+        y: 0, // Slide in to its original position
+        transition: {
+          duration: 3, // Animation duration
+        },
+      }}
+      className="border border-light shadow-none mt-5 mt-lg-0 card"
+    >
       <div className="border-0 bg-transparent card-header">
         <div className="d-flex">
           <i className="mdi-circle bg-danger mr-1"></i>
@@ -20,15 +37,13 @@ export const CardFeature = ({ image_url }: CardFeatureProps) => {
           <Image
             className="img-radius img-fluid"
             src={image_url}
-            alt="vision image"
-            width={0}
-            height={0}
-            layout="responsive"
-            objectFit="contain"
+            alt="feature image"
+            width={500}
+            height={300}
             priority
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
