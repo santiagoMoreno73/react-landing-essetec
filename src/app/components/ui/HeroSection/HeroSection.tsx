@@ -1,4 +1,5 @@
 "use client";
+import { FC } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import "./HeroSection.css";
@@ -10,12 +11,12 @@ type HeroSectionProps = {
   imgUrl?: string;
 };
 
-export const HeroSection = ({
+export const HeroSection: FC<HeroSectionProps> = ({
   title,
   description,
   imgUrl,
   isVideo = true,
-}: HeroSectionProps) => {
+}) => {
   return (
     <section id="#home">
       <div className="hero-container">

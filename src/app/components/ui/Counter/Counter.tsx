@@ -5,7 +5,7 @@ import {
   useInView,
   useIsomorphicLayoutEffect,
 } from "framer-motion";
-import { useRef } from "react";
+import { FC, useRef } from "react";
 
 type AnimatedCounterProps = {
   from: number;
@@ -14,12 +14,12 @@ type AnimatedCounterProps = {
   animationOptions?: KeyframeOptions;
 };
 
-export const Counter = ({
+export const Counter: FC<AnimatedCounterProps> = ({
   from,
   to,
   duration,
   animationOptions,
-}: AnimatedCounterProps) => {
+}) => {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FC } from "react";
 
 type CardServiceProps = {
   title: string;
@@ -6,11 +7,11 @@ type CardServiceProps = {
   options: any;
 };
 
-export const CardService = ({
+export const CardService: FC<CardServiceProps> = ({
   title,
   description,
   options,
-}: CardServiceProps) => {
+}) => {
   return (
     <div className="card mb-3">
       <div className={`card-background bg-custom-${options.color}`}></div>
