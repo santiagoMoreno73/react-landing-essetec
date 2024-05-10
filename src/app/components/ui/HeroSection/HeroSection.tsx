@@ -22,8 +22,8 @@ export const HeroSection: FC<HeroSectionProps> = ({
       <div className="hero-container">
         {isVideo ? (
           <div className="hero-video">
-            <video autoPlay muted loop>
-              <source src="/video/video_essetec.mp4"></source>
+            <video id="video" autoPlay muted loop>
+              <source src="/video/video_essetec.mp4" type="video/mp4"></source>
             </video>
           </div>
         ) : (
