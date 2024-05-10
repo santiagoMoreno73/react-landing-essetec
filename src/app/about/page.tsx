@@ -1,15 +1,11 @@
 import type { NextPage } from "next";
-import {
-  HeroSection,
-  MisionSection,
-  VisionSection,
-  OurValues,
-} from "../components/about";
+import { MisionSection, VisionSection, OurValues } from "../components/about";
+import { HeroSection } from "../components/ui";
 
 const AboutPage: NextPage = () => {
   return (
     <>
-      <HeroSection></HeroSection>
+      <HeroSection isVideo={false} imgUrl="/images/about_us.jpg" />
 
       <section className="section" id="mision">
         <div className="container">

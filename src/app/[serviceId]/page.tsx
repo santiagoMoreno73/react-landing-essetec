@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import { HeroSection } from "../components/service/HeroSection";
+
 import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { useState } from "react";
+import { HeroSection } from "../components/ui";
 
-const services = [
+const SERVICES = [
   {
     id: "services",
     name: "Servicios",
@@ -42,7 +43,7 @@ export default function ServiceDetail({ params }) {
   let currentService: any = {};
 
   if (selectedId) {
-    currentService = services.filter((service) => service.id == selectedId)[0];
+    currentService = SERVICES.filter((service) => service.id == selectedId)[0];
   }
 
   const handleSelectService = (serviceId: string) => {
@@ -52,10 +53,8 @@ export default function ServiceDetail({ params }) {
 
   return (
     <>
-      <HeroSection></HeroSection>
-
+      <HeroSection isVideo={false} imgUrl="/images/about_us2.jpg" />
       {/* <h1> {params.serviceId} - page</h1> */}
-
       <section className="section" id="services">
         <div className="container">
           <div className="justify-content-center row">
@@ -73,7 +72,7 @@ export default function ServiceDetail({ params }) {
 
             <div className="col-lg-4">
               <ListGroup
-                items={services}
+                items={SERVICES}
                 itemId={selectedId}
                 onSelect={(id: string) => handleSelectService(id)}
               />
@@ -81,11 +80,10 @@ export default function ServiceDetail({ params }) {
                 <Image
                   className="img-radius img-fluid"
                   src="/images/services.jpg"
-                  alt="mision image"
-                  width={0}
-                  height={0}
-                  layout="responsive"
-                  objectFit="contain"
+                  alt="Call center image"
+                  width={400}
+                  height={300}
+                  priority
                 />
               </div>
             </div>
@@ -100,14 +98,15 @@ export default function ServiceDetail({ params }) {
                   capacidad de reacción para evitar o mitigar las amenazas que
                   puedan surgir.
                 </p>
+
                 <Image
                   className="img-radius img-fluid"
                   src="/images/services2.jpg"
-                  alt="mision image"
-                  width={0}
-                  height={10}
-                  layout="responsive"
-                  objectFit="contain"
+                  alt="Office image"
+                  width={400}
+                  height={300}
+                  sizes="(min-width: 360px) 100vw"
+                  priority
                 />
               </div>
             </div>

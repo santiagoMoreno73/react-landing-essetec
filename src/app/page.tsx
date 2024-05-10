@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 
 import {
   ServiceSection,
-  HeroSection,
   FeaturesSection,
   ClientsSection,
   SolutionSection,
   SubscribeSection,
 } from "./components/home";
+import { HeroSection } from "./components/ui";
 
 export const metadata = {
   title: "ESSETEC",
