@@ -4,6 +4,7 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import BootstrapClient from "./components/BootstrapClient/BootstrapClient";
 import { BaseLayout } from "./components/layouts";
+import { FloatButton } from "./components/ui";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
         <BaseLayout>{children}</BaseLayout>
         <BootstrapClient />
+        <FloatButton />
       </body>
     </html>
   );
