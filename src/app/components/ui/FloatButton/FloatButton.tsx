@@ -9,7 +9,8 @@ export const FloatButton = () => {
       whileTap={{ scale: 0.85 }}
       className="btn-float box-shadow"
       type="button"
-      href=""
+      href="https://api.whatsapp.com/send?phone=573202063747"
+      target="_blank"
     >
       <FaWhatsapp className="icon" />
     </motion.a>
