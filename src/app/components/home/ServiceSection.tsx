@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 // icons
 import { GiCctvCamera } from "react-icons/gi";
 import { IoServer } from "react-icons/io5";
