@@ -48,6 +48,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
                 width={330}
                 height={380}
                 alt="icon"
+                priority
               />
               <h1 className="hero-title text-white mb-4">
                 <span className="font-24">
