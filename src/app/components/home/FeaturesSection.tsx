@@ -53,9 +53,9 @@ export const FeaturesSection = () => {
               </div>
             </div> */}
             <div className="mt-4">
-              <a href="/" className="btn btn-primary">
+              {/* <a href="/" className="btn btn-primary">
                 Leer más <IoIosArrowForward />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
@@ -92,9 +92,9 @@ export const FeaturesSection = () => {
                 </div>
               </div> */}
             <div className="mt-4">
-              <a href="/" className="btn btn-primary">
+              {/* <a href="/" className="btn btn-primary">
                 Leer más <IoIosArrowForward />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
@@ -132,9 +132,9 @@ export const FeaturesSection = () => {
                 </div>
               </div> */}
             <div className="mt-4">
-              <a href="/" className="btn btn-primary">
+              {/* <a href="/" className="btn btn-primary">
                 Leer más <IoIosArrowForward />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
