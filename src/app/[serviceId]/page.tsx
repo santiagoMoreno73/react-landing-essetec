@@ -176,7 +176,10 @@ export default function ServicePage({ params }) {
 
   return (
     <>
-      <HeroSection isVideo={false} imgUrl="/images/about_us2.jpg" />
+      <HeroSection
+        isVideo={false}
+        imgUrl="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/about_us2.jpg?alt=media&token=6c750ab4-b744-4890-a06d-577c75584ecc"
+      />
       {/* <h1> {params.serviceId} - page</h1> */}
       <section className="section" id="services">
         <div className="container">
@@ -202,7 +205,7 @@ export default function ServicePage({ params }) {
               <div className="mb-5">
                 <Image
                   className="img-radius-20 img-fluid"
-                  src="/images/services.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/services.jpg?alt=media&token=4d65133d-d89f-4bb2-81ec-7befefe07552"
                   alt="Call center image"
                   width={400}
                   height={300}

@@ -60,7 +60,10 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature position={1} image_url="/images/server.jpg" />
+              <CardFeature
+                position={1}
+                image_url="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/server.jpg?alt=media&token=2c4a79c4-3eda-4183-a2e6-ed80199fa899"
+              />
             </div>
           </div>
         </div>
@@ -96,7 +99,10 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature position={2} image_url="/images/camera.jpg" />
+              <CardFeature
+                position={2}
+                image_url="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/camera.jpg?alt=media&token=44cf292b-ad93-4a05-9ea6-5caa4a53b88a"
+              />
             </div>
           </div>
         </div>
@@ -133,7 +139,10 @@ export const FeaturesSection = () => {
           </div>
           <div className="ms-lg-auto col-sm-8 col-lg-5">
             <div>
-              <CardFeature position={3} image_url="/images/marketing.jpg" />
+              <CardFeature
+                position={3}
+                image_url="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/marketing.jpg?alt=media&token=ef56f7a4-0444-4cb2-9b58-44fe15b6ac36"
+              />
             </div>
           </div>
         </div>

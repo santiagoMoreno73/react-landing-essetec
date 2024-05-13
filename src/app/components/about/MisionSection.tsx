@@ -20,7 +20,7 @@ export const MisionSection = () => {
         <div className="text-center mb-5">
           <Image
             className="img-radius-20 img-fluid"
-            src="/images/mision.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mision.jpg?alt=media&token=edec1697-01f1-4b88-b62b-4eb357efe767"
             alt="mision image"
             width={600}
             height={500}

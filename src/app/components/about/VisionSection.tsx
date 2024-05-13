@@ -27,7 +27,7 @@ export const VisionSection = () => {
         <div className="text-center mb-5">
           <Image
             className="img-radius-20 img-fluid"
-            src="/images/vision.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/vision.jpg?alt=media&token=197ef9fa-391d-450e-90d4-f06a92b57c84"
             alt="vision image"
             width={600}
             height={500}
