@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 
-import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { useState } from "react";
+import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { HeroSection } from "../components/ui";
+import { ServiceDetail } from "../components/service/ServiceDetail";
 
 const SERVICES = [
   {
@@ -11,34 +12,157 @@ const SERVICES = [
     name: "Servicios",
     title: "Servicios",
     subtitle: "Servicios",
-    content: " ",
+    paragraph:
+      "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
+    options: [
+      {
+        id: 0,
+        paragraph: "any",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+      {
+        id: 1,
+        paragraph: "any",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "security",
     name: "Seguridad electrónica",
     title: "Seguridad electrónica",
-    subtitle: "Seguridad electrónica",
-    content:
+    subtitle: "Servicios",
+    paragraph:
       "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
+    options: [
+      {
+        id: 0,
+        paragraph:
+          "CCTV: instalación de equipos conectados genera un circuito de imágenes que solo pueden ser visualizadas por un grupo determinado de personas. Estas se personalizan para adaptarse a las necesidades específicas de cada cliente, ya sea en seguridad, vigilancia o mejora de servicios.",
+        media: [
+          {
+            id: 0,
+            title: "Análogas",
+            description: "",
+            src: "/images/services/analoga.png",
+            alt: "camara analoga",
+          },
+          {
+            id: 1,
+            title: "IP",
+            description: "",
+            src: "/images/services/ip.png",
+            alt: "ip",
+          },
+          {
+            id: 2,
+            title: "Inalámbricas",
+            description: "",
+            src: "/images/services/analoga.png",
+            alt: "camara inalambrica",
+          },
+          {
+            id: 3,
+            title: "DVR / NVR",
+            description: "",
+            src: "/images/services/ip.png",
+            alt: "dvr",
+          },
+        ],
+      },
+      {
+        id: 1,
+        paragraph:
+          "BIOMETRICOS: Sistemas de control de acceso, registros de control de ingreso personal o personal autorizado:",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/biometrico.jpg",
+            alt: "xxxx",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "infrastructure",
     name: "Infraestructura",
     title: "Infraestructura",
     subtitle: "Infraestructura",
-    content:
+    paragraph:
       "Proporcionar servicios esenciales de infraestructura y outsourcing de tecnología, redes seguras, almacenamiento de datos confiable, gestión de servidores eficiente, soporte técnico continuo.",
+    options: [
+      {
+        id: 0,
+        paragraph: "Redes y comunicaciones",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+      {
+        id: 1,
+        paragraph:
+          "Virtualización:  Asesoría e implementación en servicios de visualización de tus servidores y micro servicios",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "web",
     name: "Servicio WEB",
     title: "Servicio WEB",
     subtitle: "Servicio WEB",
-    content: "",
+    paragraph: "",
+    options: [
+      {
+        id: 0,
+        paragraph: "",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+      {
+        id: 1,
+        paragraph: "",
+        media: [
+          {
+            id: 0,
+            src: "/images/services/analoga.png",
+            alt: "xxxx",
+          },
+        ],
+      },
+    ],
   },
 ];
 
-export default function ServiceDetail({ params }) {
+export default function ServicePage({ params }) {
   const [selectedId, setSelectedId] = useState(params.serviceId);
   let currentService: any = {};
 
@@ -47,7 +171,6 @@ export default function ServiceDetail({ params }) {
   }
 
   const handleSelectService = (serviceId: string) => {
-    console.log("event", serviceId);
     setSelectedId(serviceId);
   };
 
@@ -89,24 +212,11 @@ export default function ServiceDetail({ params }) {
             </div>
             <div className="col-lg-8">
               <div className="mb-5">
-                <h4>{currentService.title}</h4>
-                <h6>{currentService.subtitle}</h6>
-
-                <p>
-                  Los sistemas de seguridad electrónica ayudan a prevenir
-                  pérdidas, controlan los accesos no autorizados y mejoran la
-                  capacidad de reacción para evitar o mitigar las amenazas que
-                  puedan surgir.
-                </p>
-
-                <Image
-                  className="img-radius-20 img-fluid"
-                  src="/images/services2.jpg"
-                  alt="Office image"
-                  width={400}
-                  height={300}
-                  sizes="(min-width: 360px) 100vw"
-                  priority
+                <ServiceDetail
+                  title={currentService.title}
+                  subtitle={currentService.subtitle}
+                  paragraph={currentService.paragraph}
+                  options={currentService.options}
                 />
               </div>
             </div>
