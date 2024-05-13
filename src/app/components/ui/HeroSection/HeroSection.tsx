@@ -33,8 +33,6 @@ export const HeroSection: FC<HeroSectionProps> = ({
             className="hero-image"
             style={{
               background: `url(${imgUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
             }}
           ></div>
         )}

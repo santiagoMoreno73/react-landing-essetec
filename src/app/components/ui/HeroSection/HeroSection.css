@@ -8,6 +8,8 @@
 }
 .hero-image {
   height: 80vh;
+  background-size: cover !important;
+  background-position: center !important;
 }
 .hero-content {
   background: rgba(0, 0, 0, 0.5);
