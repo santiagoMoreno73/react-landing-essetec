@@ -11,7 +11,7 @@ const SERVICES = [
     id: "services",
     name: "Servicios",
     title: "Servicios",
-    subtitle: "Servicios",
+    subtitle: "",
     paragraph:
       "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
     options: [
@@ -42,8 +42,8 @@ const SERVICES = [
   {
     id: "security",
     name: "Seguridad electrónica",
-    title: "Seguridad electrónica",
-    subtitle: "Servicios",
+    title: "Seguridad electrónica ",
+    subtitle: "",
     paragraph:
       "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
     options: [
@@ -55,7 +55,8 @@ const SERVICES = [
           {
             id: 0,
             title: "Análogas",
-            description: "",
+            description:
+              "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500 ",
             src: "/images/services/analoga.png",
             alt: "camara analoga",
           },
@@ -90,7 +91,7 @@ const SERVICES = [
           {
             id: 0,
             src: "/images/services/biometrico.jpg",
-            alt: "xxxx",
+            alt: "biometrico",
           },
         ],
       },
@@ -98,9 +99,9 @@ const SERVICES = [
   },
   {
     id: "infrastructure",
-    name: "Infraestructura",
-    title: "Infraestructura",
-    subtitle: "Infraestructura",
+    name: "Infraestructura & Outsorcing de tecnología",
+    title: "Infraestructura & Outsorcing de tecnología",
+    subtitle: "",
     paragraph:
       "Proporcionar servicios esenciales de infraestructura y outsourcing de tecnología, redes seguras, almacenamiento de datos confiable, gestión de servidores eficiente, soporte técnico continuo.",
     options: [
@@ -133,7 +134,7 @@ const SERVICES = [
     id: "web",
     name: "Servicio WEB",
     title: "Servicio WEB",
-    subtitle: "Servicio WEB",
+    subtitle: "",
     paragraph: "",
     options: [
       {
@@ -202,7 +203,7 @@ export default function ServicePage({ params }) {
                 itemId={selectedId}
                 onSelect={(id: string) => handleSelectService(id)}
               />
-              <div className="mb-5">
+              <div className="mb-3">
                 <Image
                   className="img-radius-20 img-fluid"
                   src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/services.jpg?alt=media&token=4d65133d-d89f-4bb2-81ec-7befefe07552"
@@ -212,10 +213,14 @@ export default function ServicePage({ params }) {
                   priority
                 />
               </div>
+              <a className="btn btn-primary w-100" href="/about">
+                Sobre nosotros
+              </a>
             </div>
             <div className="col-lg-8">
               <div className="mb-5">
                 <ServiceDetail
+                  id={currentService.id}
                   title={currentService.title}
                   subtitle={currentService.subtitle}
                   paragraph={currentService.paragraph}
