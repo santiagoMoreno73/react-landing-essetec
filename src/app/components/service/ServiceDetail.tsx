@@ -27,11 +27,12 @@ export const ServiceDetail: FC<ServiceDetailType> = ({
           <div key={index}>
             <div>{option.paragraph}</div>
             <div className="row my-4">
-              {option.media.map(({ id, title, description, src, alt }) => (
+              {option.media.map(({ id, title, paragraph, src, alt }) => (
                 <div className="col-sm-12 col-md-6" key={id}>
                   <CardServiceDetail
+                    id={id}
                     title={title}
-                    description={description}
+                    paragraph={paragraph}
                     src={src}
                     alt={alt}
                   />
