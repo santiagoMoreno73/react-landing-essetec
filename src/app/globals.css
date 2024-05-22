@@ -64,8 +64,24 @@ p {
   font-size: 24px;
 }
 
+.color-white {
+  color: var(--bs-white);
+}
+
 .color-primary {
   color: var(--primary);
+}
+
+.color-security {
+  color: #2898ee;
+}
+
+.color-it {
+  color: #107acc;
+}
+
+.color-web {
+  color: #0cbccc;
 }
 
 .color-danger {
@@ -98,6 +114,18 @@ p {
 
 .bg-custom-warning {
   background: var(--warning);
+}
+
+.bg-custom-security {
+  background: #2898ee;
+}
+
+.bg-custom-it {
+  background: #107acc;
+}
+
+.bg-custom-web {
+  background: #0cbccc;
 }
 
 .icons-sm {
@@ -183,6 +211,19 @@ p {
 .avatar-md {
   height: 3.5rem;
   width: 3.5rem;
+}
+
+.avatar-sm {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px var(--bs-gray-600);
 }
 
 .avatar-title {
