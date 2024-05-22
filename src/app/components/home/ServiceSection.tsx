@@ -12,8 +12,8 @@ const SERVICES = [
     description:
       "Los sistemas de seguridad electrónica previenen pérdidas, controlan accesos no autorizados y permiten una respuesta rápida ante amenazas.",
     options: {
-      color: "danger",
-      icon: <GiCctvCamera className="color-danger" />,
+      color: "security",
+      icon: <GiCctvCamera className="color-security" />,
       href: "/security",
     },
   },
@@ -22,18 +22,18 @@ const SERVICES = [
     description:
       "Ofrecemos servicios tecnológicos integrales, desde infraestructura y redes seguras hasta almacenamiento confiable de datos.",
     options: {
-      color: "success",
-      icon: <IoServer className="color-success" />,
+      color: "it",
+      icon: <IoServer className="color-it" />,
       href: "/infrastructure",
     },
   },
   {
-    title: "WEB",
+    title: "Desarrollo web",
     description:
       "Nuestro servicio web se enorgullece de ofrecer soluciones eficientes y seguras para cubrir todas tus necesidades en línea.",
     options: {
-      color: "warning",
-      icon: <MdWeb className="color-warning" />,
+      color: "web",
+      icon: <MdWeb className="color-web" />,
       href: "/web",
     },
   },

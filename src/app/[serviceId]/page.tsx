@@ -3,8 +3,12 @@ import Image from "next/image";
 
 import { useState } from "react";
 import { ListGroup } from "../components/ui/ListGroup/ListGroup";
-import { HeroSection } from "../components/ui";
-import { ServiceDetail } from "../components/service/ServiceDetail";
+import { CardFlip, HeroSection } from "../components/ui";
+import { CardServiceDetail } from "../components/service/CardServiceDetail";
+import { GiCctvCamera } from "react-icons/gi";
+import { IoServer } from "react-icons/io5";
+import { MdWeb } from "react-icons/md";
+// import { ServiceDetail } from "../components/service/ServiceDetail";
 
 const SERVICES = [
   {
@@ -13,29 +17,31 @@ const SERVICES = [
     title: "Servicios",
     subtitle: "",
     paragraph:
-      "Los sistemas de seguridad electrónica ayudan a prevenir pérdidas, controlan los accesos no autorizados y mejoran la capacidad de reacción para evitar o mitigar las amenazas que puedan surgir.",
+      "En nuestra empresa, nos dedicamos a proporcionar soluciones integrales que cubren diversas necesidades tecnológicas y de seguridad. Con un enfoque en la innovación y la satisfacción del cliente, ofrecemos una gama completa de servicios diseñados para proteger sus activos, optimizar su infraestructura y potenciar su presencia en línea.",
     options: [
       {
         id: 0,
-        paragraph: "any",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
+        title: "Seguridad Electrónica",
+        color: "security",
+        icon: <GiCctvCamera className="color-white" />,
+        paragraph:
+          "Nuestros servicios de seguridad electrónica están diseñados para prevenir pérdidas, controlar accesos no autorizados y mejorar la capacidad de respuesta ante amenazas. Ofrecemos la instalación y mantenimiento de sistemas avanzados de CCTV, incluyendo cámaras análogas, IP e inalámbricas, así como soluciones de grabación con DVR y NVR. Nos adaptamos a las necesidades específicas de cada cliente para garantizar una protección óptima.",
       },
       {
         id: 1,
-        paragraph: "any",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
+        title: "Infraestructura & Outsorcing de tecnologia",
+        color: "it",
+        icon: <IoServer className="color-white" />,
+        paragraph:
+          "Proveemos soluciones completas de infraestructura tecnológica y servicios de outsourcing para ayudar a su empresa a operar de manera más eficiente. Desde la implementación y mantenimiento de redes hasta la gestión de servidores y soporte técnico, nos aseguramos de que su tecnología esté siempre en su mejor estado. Nuestro equipo de expertos está dedicado a optimizar sus recursos tecnológicos para que pueda centrarse en su negocio principal.",
+      },
+      {
+        id: 2,
+        title: "Desarrollo web",
+        color: "web",
+        icon: <MdWeb className="color-white" />,
+        paragraph:
+          "Ofrecemos servicios de desarrollo web personalizados para impulsar su presencia en línea. Nuestro equipo de desarrolladores crea sitios web atractivos, funcionales y optimizados para SEO que reflejan la identidad de su marca y cumplen con sus objetivos comerciales. Ya sea que necesite un sitio web corporativo, una tienda en línea o una aplicación web personalizada, estamos aquí para ayudarle a alcanzar sus metas digitales.",
       },
     ],
   },
@@ -56,28 +62,31 @@ const SERVICES = [
             id: 0,
             title: "Análogas",
             description:
-              "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500 ",
+              "Cámaras tradicionales que transmiten video a través de cables coaxiales a un grabador de video digital (DVR). Son conocidas por su confiabilidad y costo más bajo.",
             src: "/images/services/analoga.png",
             alt: "camara analoga",
           },
           {
             id: 1,
             title: "IP",
-            description: "",
+            description:
+              "Cámaras que transmiten video digital a través de una red IP. Ofrecen alta resolución y permiten acceso remoto a las imágenes en tiempo real mediante internet.",
             src: "/images/services/ip.png",
             alt: "ip",
           },
           {
             id: 2,
             title: "Inalámbricas",
-            description: "",
+            description:
+              "Cámaras que se conectan a la red y transmiten video sin cables, utilizando tecnología Wi-Fi. Son fáciles de instalar y proporcionan flexibilidad en la ubicación.",
             src: "/images/services/analoga.png",
             alt: "camara inalambrica",
           },
           {
             id: 3,
             title: "DVR / NVR",
-            description: "",
+            description:
+              "Dispositivos de grabación y gestión de video. El DVR se utiliza con cámaras análogas, mientras que el NVR se utiliza con cámaras IP. Ambos permiten almacenar y revisar las grabaciones.",
             src: "/images/services/ip.png",
             alt: "dvr",
           },
@@ -132,8 +141,8 @@ const SERVICES = [
   },
   {
     id: "web",
-    name: "Servicio WEB",
-    title: "Servicio WEB",
+    name: "Desarrollo web",
+    title: "Desarrollo web",
     subtitle: "",
     paragraph: "",
     options: [
@@ -197,7 +206,7 @@ export default function ServicePage({ params }) {
               </p>
             </div>
 
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-3">
               <ListGroup
                 items={SERVICES}
                 itemId={selectedId}
@@ -219,13 +228,64 @@ export default function ServicePage({ params }) {
             </div>
             <div className="col-lg-8">
               <div className="mb-5">
-                <ServiceDetail
-                  id={currentService.id}
-                  title={currentService.title}
-                  subtitle={currentService.subtitle}
-                  paragraph={currentService.paragraph}
-                  options={currentService.options}
-                />
+                {currentService && currentService.id == "services" ? (
+                  <section id="">
+                    <h4>{currentService.title}</h4>
+                    <h6>{currentService.subtitle}</h6>
+                    <p>{currentService.paragraph}</p>
+
+                    <div className="my-3">
+                      {currentService.options.map(
+                        (option: any, index: number) => (
+                          <div key={index} className="my-3">
+                            <div className="d-flex align-items-center mb-3">
+                              <span
+                                className={`avatar avatar-sm bg-custom-${option.color} font-20`}
+                              >
+                                {option.icon}
+                              </span>
+                              <h6 className="small-title mx-2">
+                                {option.title}
+                              </h6>
+                            </div>
+                            <p>{option.paragraph}</p>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </section>
+                ) : (
+                  <section id="">
+                    <h4>{currentService.title}</h4>
+                    <h6>{currentService.subtitle}</h6>
+                    <p>{currentService.paragraph}</p>
+
+                    <div className="my-3">
+                      {currentService.options.map(
+                        (option: any, index: number) => (
+                          <div key={index}>
+                            <div>{option.paragraph}</div>
+                            <div className="row my-4">
+                              {option.media.map(
+                                ({ id, title, description, src, alt }) => (
+                                  <div className="col-sm-12 col-md-4" key={id}>
+                                    <CardFlip
+                                      id={id}
+                                      title={title}
+                                      paragraph={description}
+                                      src={src}
+                                      alt={alt}
+                                    />
+                                  </div>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </section>
+                )}
               </div>
             </div>
           </div>
