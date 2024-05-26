@@ -103,12 +103,26 @@ export const ServiceSecurity = () => {
             <CarrouselBrand slides={BRANDS} />
           </div>
         </div>
-
-        <div>
+        <div id="Biométricos">
           <p>
             BIOMETRICOS: Sistemas de control de acceso, registros de control de
-            ingreso personal o personal autorizado:
+            ingreso personal o personal autorizado.
           </p>
+          <div className="row my-4">
+            <div className="col">
+              <CardFlip
+                id={0}
+                width={180}
+                height={180}
+                title={"Video Portero"}
+                paragraph={
+                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
+                }
+                src={"/images/services/videoportero.png"}
+                alt={"Equipo biométrico"}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

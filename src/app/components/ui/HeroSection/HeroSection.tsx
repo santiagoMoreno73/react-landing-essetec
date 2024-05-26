@@ -63,10 +63,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
                   </b>
                 </span>
               </h1>
-              <p className="font-20">
-                Convierte tu negocio en una experiencia <br />
-                tecnológica sorprendente, única e innovadora.
-              </p>
+              <p className="font-22 text-white">{description}</p>
             </div>
           </div>
         </div>
