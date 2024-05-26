@@ -1,9 +1,16 @@
 import Image from "next/image";
 import "./CardFlip.css";
 
-export const CardFlip = ({ id, title, paragraph, src, alt }) => {
+export const CardFlip = ({ id, width, height, title, paragraph, src, alt }) => {
   return (
-    <div id={`card-${id}`} className="flip-container">
+    <div
+      id={`card-${id}`}
+      className="flip-container"
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+      }}
+    >
       <div className="card">
         <div className="front">
           <div className="content">
