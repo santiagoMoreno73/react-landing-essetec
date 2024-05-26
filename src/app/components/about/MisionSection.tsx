@@ -3,7 +3,7 @@ import Image from "next/image";
 export const MisionSection = () => {
   return (
     <div className="justify-content-center row mb-5" id="mision">
-      <div className="text-center mb-5">
+      {/* <div className="text-center mb-5">
         <h5 className="text-primary text-uppercase small-title">
           Acerca de nosotros
         </h5>
@@ -14,7 +14,7 @@ export const MisionSection = () => {
           nuestro equipo está aquí para brindarte soluciones eficientes y
           personalizadas.
         </p>
-      </div>
+      </div> */}
 
       <div className="col-lg-6">
         <div className="text-center mb-5">
