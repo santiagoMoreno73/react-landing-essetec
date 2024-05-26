@@ -17,11 +17,17 @@ import { DotButton, useDotButton } from "./CarrouselDotButton";
 
 type PropType = {
   slides: any[];
+  slideHeight?: string;
+  controls: boolean;
   options?: EmblaOptionsType;
 };
 
-export const Carrousel: FC<PropType> = (props) => {
-  const { slides, options } = props;
+export const Carrousel: FC<PropType> = ({
+  slides,
+  slideHeight = "19rem",
+  options,
+  controls,
+}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     ClassNames(),
     Autoplay(),
@@ -38,13 +44,16 @@ export const Carrousel: FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="embla">
+    <div
+      className="embla"
+      style={{ "--slide-height": slideHeight } as React.CSSProperties}
+    >
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((img, index) => (
             <div className="embla__slide embla__class-names" key={index}>
               <Image
-                className="embla__slide__img"
+                className="embla__slide__img img-fluid"
                 width={500}
                 height={200}
                 src={img.src}
@@ -55,24 +64,32 @@ export const Carrousel: FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected" : ""
-              )}
+      {controls && (
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
             />
-          ))}
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
+
+          <div className="embla__dots">
+            {scrollSnaps.map((_, index) => (
+              <DotButton
+                key={index}
+                onClick={() => onDotButtonClick(index)}
+                className={"embla__dot".concat(
+                  index === selectedIndex ? " embla__dot--selected" : ""
+                )}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -67,7 +67,7 @@ export const ClientsSection = () => {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <Carrousel slides={SLIDES} options={OPTIONS} />
+            <Carrousel slides={SLIDES} options={OPTIONS} controls={true} />
           </div>
         </div>
         <div className="row mt-5">
