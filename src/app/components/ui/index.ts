@@ -6,3 +6,4 @@ export { Carrousel } from './Carrousel/Carrousel';
 export { Counter } from './Counter/Counter';
 export { FloatButton } from './FloatButton/FloatButton';
 export { CardFlip } from './CardFlip/CardFlip';
+export { CarrouselBrand } from './CarrouselBrand/CarrouselBrand';
