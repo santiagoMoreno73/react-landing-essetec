@@ -17,7 +17,7 @@ export const metadata = {
 const Home: NextPage = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection description="Convierte tu negocio en una experiencia tecnológica sorprendente, única e innovadora." />
       <ServiceSection />
       <FeaturesSection />
       <SolutionSection />

@@ -100,13 +100,14 @@ export default function ServicePage({ params }) {
     <>
       <HeroSection
         isVideo={false}
+        description="Explora Nuestros Servicios"
         imgUrl="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/about_us2.jpg?alt=media&token=6c750ab4-b744-4890-a06d-577c75584ecc"
       />
       {/* <h1> {params.serviceId} - page</h1> */}
       <section className="section" id="services">
         <div className="container">
           <div className="justify-content-center row">
-            <div className="text-center mb-5">
+            {/* <div className="text-center mb-5">
               <h5 className="text-primary text-uppercase small-title">
                 Servicios
               </h5>
@@ -116,7 +117,7 @@ export default function ServicePage({ params }) {
                 hasta consultoría en tecnología, nuestro equipo está aquí para
                 brindarte soluciones eficientes y personalizadas.
               </p>
-            </div>
+            </div> */}
 
             <div className="col-lg-4 mb-3">
               <ListGroup
