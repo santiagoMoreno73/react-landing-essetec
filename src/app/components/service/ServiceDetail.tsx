@@ -31,7 +31,7 @@ const serviceDetail = [
 
 export const ServiceDetail = () => {
   return (
-    <>
+    <div>
       <h4>Servicios</h4>
       <p>
         En nuestra empresa, nos dedicamos a proporcionar soluciones integrales
@@ -43,17 +43,21 @@ export const ServiceDetail = () => {
 
       <div className="my-3">
         {serviceDetail.map(({ id, color, icon, title, paragraph }) => (
-          <div key={id} className="my-3">
-            <div className="d-flex align-items-center mb-3">
-              <span className={`avatar avatar-sm bg-custom-${color} font-20`}>
-                {icon}
-              </span>
-              <h6 className="small-title mx-2">{title}</h6>
+          <div key={id} className="card my-3">
+            <div className="card-header">
+              <div className="d-flex align-items-center ">
+                <span className={`avatar avatar-sm bg-custom-${color} font-20`}>
+                  {icon}
+                </span>
+                <h6 className="small-title mx-2">{title}</h6>
+              </div>
             </div>
-            <p>{paragraph}</p>
+            <div className="p-4">
+              <p className="card-text">{paragraph}</p>
+            </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
