@@ -1,26 +1,23 @@
-const serviceDetail = [
+import { CarrouselBrand } from "../ui";
+
+const BRANDS = [
   {
     id: 0,
-    paragraph: "Redes y comunicaciones",
-    media: [
-      {
-        id: 0,
-        src: "/images/services/analoga.png",
-        alt: "xxxx",
-      },
-    ],
+    name: "carrousel-img-1",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/virtualization%2FHyper.png?alt=media&token=46b1856d-5dba-42b2-b7f6-3b2933e34eb9",
+    alt: "Dahua-logo",
   },
   {
     id: 1,
-    paragraph:
-      "Virtualización:  Asesoría e implementación en servicios de visualización de tus servidores y micro servicios.",
-    media: [
-      {
-        id: 0,
-        src: "/images/services/analoga.png",
-        alt: "xxxx",
-      },
-    ],
+    name: "carrousel-img-2",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/virtualization%2Fproxmox.png?alt=media&token=1c235f3f-82df-4810-b940-7a4568075405",
+    alt: "Hikvision-logo",
+  },
+  {
+    id: 2,
+    name: "carrousel-img-3",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/virtualization%2Fvmware.png?alt=media&token=b946a057-bac1-4ea8-a4a5-4044f5aaed32",
+    alt: "Hilook-logo",
   },
 ];
 export const ServiceInfraestructure = () => {
@@ -63,17 +60,7 @@ export const ServiceInfraestructure = () => {
           </p>
           <div className="row my-4">
             <div className="col">
-              {/* <CardFlip
-                id={0}
-                width={180}
-                height={180}
-                title={"Video Portero"}
-                paragraph={
-                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
-                }
-                src={"/images/services/videoportero.png"}
-                alt={"Equipo biométrico"}
-              /> */}
+              <CarrouselBrand slides={BRANDS} />
             </div>
           </div>
         </div>
