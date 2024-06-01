@@ -6,6 +6,7 @@ import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { HeroSection } from "../components/ui";
 import { ServiceDetail } from "../components/service/ServiceDetail";
 import { ServiceSecurity } from "../components/service/ServiceSecurity";
+import { ServiceInfraestructure } from "../components/service";
 
 // import { ServiceDetail } from "../components/service/ServiceDetail";
 
@@ -21,35 +22,6 @@ const SERVICES = [
   {
     id: "infrastructure",
     name: "Infraestructura & Outsorcing de tecnología",
-    title: "Infraestructura & Outsorcing de tecnología",
-    subtitle: "",
-    paragraph:
-      "Proporcionar servicios esenciales de infraestructura y outsourcing de tecnología, redes seguras, almacenamiento de datos confiable, gestión de servidores eficiente, soporte técnico continuo.",
-    options: [
-      {
-        id: 0,
-        paragraph: "Redes y comunicaciones",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
-      },
-      {
-        id: 1,
-        paragraph:
-          "Virtualización:  Asesoría e implementación en servicios de visualización de tus servidores y micro servicios",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
-      },
-    ],
   },
   {
     id: "web",
@@ -151,6 +123,16 @@ export default function ServicePage({ params }) {
                   <section id="security">
                     <ServiceSecurity />
                   </section>
+                )}
+
+                {currentService.id == "infrastructure" && (
+                  <section id="infrastructure">
+                    <ServiceInfraestructure />
+                  </section>
+                )}
+
+                {currentService.id == "web" && (
+                  <section id="web">{/* <ServiceInfraestructure /> */}</section>
                 )}
               </div>
             </div>
