@@ -7,7 +7,7 @@ export const VisionSection = () => {
           {/* <h5 className="text-primary text-uppercase small-title">
                 Acerca de nosotros
               </h5> */}
-          <h4 className="mb-3">Visión</h4>
+          <h3 className="mb-3">Visión</h3>
           <p>
             Ser reconocidos como líderes en soluciones integrales de seguridad
             electrónica y tecnológica, brindando tranquilidad y confianza a

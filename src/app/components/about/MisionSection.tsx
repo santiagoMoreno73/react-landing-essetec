@@ -32,7 +32,7 @@ export const MisionSection = () => {
           {/* <h5 className="text-primary text-uppercase small-title">
                 Acerca de nosotros
               </h5> */}
-          <h4 className="mb-3">Misión</h4>
+          <h3 className="mb-3">Misión</h3>
           <p>
             Proporcionar soluciones integrales que garanticen la protección de
             propiedades y activos mediante el uso de tecnologías innovadoras.

@@ -32,12 +32,10 @@ export const OurValues = () => {
     <section className="section bg-custom-light" id="mision">
       <div className="container">
         <div className="text-center mb-5">
-          <h4 className="text-primary text-uppercase small-title">
-            Nuestros Valores
-          </h4>
-          <p>
+          <h3 className="text-primary text-uppercase">Nuestros Valores</h3>
+          {/* <p>
             It will be as simple as occidental in fact, it will be Occidental.
-          </p>
+          </p> */}
         </div>
         <div className="row">
           {values.map(({ name, icon }, i) => (

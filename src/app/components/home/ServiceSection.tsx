@@ -46,10 +46,8 @@ export const ServiceSection = () => {
         <div className="justify-content-center row">
           <div className="col-lg-8">
             <div className="text-center mb-5">
-              <h5 className="text-primary text-uppercase small-title">
-                Servicios
-              </h5>
-              <h4 className="mb-3">Explora Nuestros Servicios</h4>
+              <h3 className="text-primary text-uppercase">Servicios</h3>
+              {/* <h4 className="mb-3">Explora Nuestros Servicios</h4> */}
               <p>
                 Descubre una amplia gama de servicios diseñados para satisfacer
                 tus necesidades. Desde desarrollo web hasta consultoría en

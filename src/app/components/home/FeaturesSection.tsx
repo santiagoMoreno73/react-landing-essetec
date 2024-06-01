@@ -13,12 +13,10 @@ export const FeaturesSection = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="text-center mb-5">
-              <h5 className="text-primary text-uppercase small-title">
-                Características
-              </h5>
-              <h4 className="mb-4">
+              <h3 className="text-primary text-uppercase">Características</h3>
+              {/* <h4 className="mb-4">
                 Características clave de nuestros servicios.
-              </h4>
+              </h4> */}
               <p>
                 Nuestros servicios se distinguen por una combinación de calidad
                 y accesibilidad, nuestras soluciones están diseñadas para

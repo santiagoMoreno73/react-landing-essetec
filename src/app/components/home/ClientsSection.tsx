@@ -51,13 +51,13 @@ export const ClientsSection = () => {
         <div className="justify-content-center row">
           <div className="col-lg-8">
             <div className="text-center mb-5">
-              <h5 className="text-primary text-uppercase small-title">
+              <h5 className="h3 text-primary text-uppercase">
                 Nuestras Historias de Éxito
               </h5>
-              <h4 className="mb-3">
+              {/* <h4 className="mb-3">
                 Descubre lo que nuestros clientes tienen que decir sobre
                 nosotros
-              </h4>
+              </h4> */}
               <p>
                 Desde instalaciones impresionantes hasta trabajos excepcionales,
                 cada testimonio cuenta una historia de satisfacción y éxito.
