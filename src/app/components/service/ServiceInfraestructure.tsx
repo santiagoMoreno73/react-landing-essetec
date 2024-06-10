@@ -1,6 +1,45 @@
 import Image from "next/image";
-import { CarrouselBrand } from "../ui";
+import { CardFlip, CarrouselBrand } from "../ui";
 import "./test.css";
+
+const BRANDS_SP = [
+  {
+    id: 0,
+    name: "carrousel-img-1",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2Fvyatta.png?alt=media&token=e958a73d-b7a5-4ee5-a25b-1ee326c5603b",
+    alt: "Fvyatta-logo",
+  },
+  {
+    id: 1,
+    name: "carrousel-img-2",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2Fpfsense.png?alt=media&token=7fe3d946-7596-4d00-bfb9-238e0325e2c7",
+    alt: "Fsense-logo",
+  },
+  {
+    id: 2,
+    name: "carrousel-img-3",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2Fpaloalto.png?alt=media&token=a88969f0-599e-4fd3-a803-b3601c4f3a27",
+    alt: "Paloalto-logo",
+  },
+  {
+    id: 3,
+    name: "carrousel-img-4",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2Fjuniper.png?alt=media&token=e041c0ce-fe96-4f38-8072-8cc42215db0f",
+    alt: "Juniper-logo",
+  },
+  {
+    id: 4,
+    name: "carrousel-img-5",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2Ffortinet.png?alt=media&token=ae5243e3-a659-497d-8862-fb30b902f660",
+    alt: "Fortinet-logo",
+  },
+  {
+    id: 5,
+    name: "carrousel-img-6",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/perimetral-security%2FSophos.png?alt=media&token=f0ce0844-3d59-44dc-8af5-aaec7c3558c7",
+    alt: "Sophos-logo",
+  },
+];
 
 const BRANDS_VR = [
   {
@@ -113,9 +152,54 @@ const BRANDS_MH = [
   },
 ];
 
+const BRANDS_SO = [
+  {
+    id: 0,
+    name: "carrousel-img-1",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2FKernel_debian.png?alt=media&token=29944a0b-40fd-4654-9b0f-475b1b302f90",
+    alt: "Debian-logo",
+  },
+  {
+    id: 1,
+    name: "carrousel-img-2",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2FKernel_redhat.png?alt=media&token=d458069c-0e93-42ff-a98c-908dcf3406f0",
+    alt: "RedHat-logo",
+  },
+  {
+    id: 2,
+    name: "carrousel-img-3",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2FMacOS.png?alt=media&token=33ea14ca-ed87-413a-b6cb-fcc1766e729e",
+    alt: "MacOS-logo",
+  },
+  {
+    id: 3,
+    name: "carrousel-img-4",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2Flinux.png?alt=media&token=7dcc5f54-49ae-4119-9828-052f784f547d",
+    alt: "Linux-logo",
+  },
+  {
+    id: 4,
+    name: "carrousel-img-5",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2Fmacos_bigsur.png?alt=media&token=9acadcd0-9fad-407d-886d-348c84ba9f1a",
+    alt: "BigSur-logo",
+  },
+  {
+    id: 5,
+    name: "carrousel-img-6",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2Fwin11.png?alt=media&token=392d2550-9e15-42e8-8be7-ae3f9aeb9030",
+    alt: "Windows11-logo",
+  },
+  {
+    id: 6,
+    name: "carrousel-img-7",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/so%2Fwindow.png?alt=media&token=f45396c8-1027-426e-b600-b4b1b1dbfe19",
+    alt: "WindowsServer-logo",
+  },
+];
+
 export const ServiceInfraestructure = () => {
   return (
-    <div>
+    <div id="infraestructure">
       <h4>Infraestructura & Outsorcing de tecnología</h4>
       <p>
         Proporcionar servicios esenciales de infraestructura y outsourcing de
@@ -125,30 +209,37 @@ export const ServiceInfraestructure = () => {
 
       <div className="my-3">
         <div id="network">
-          <p>Redes y comunicaciones</p>
+          <p>
+            <b>Redes y comunicaciones</b>: ofrecemos un servicio integral de
+            Redes y Comunicaciones diseñado para satisfacer todas sus
+            necesidades tecnológicas. Nuestro enfoque se centra en dos pilares
+            fundamentales: Cableado Estructurado y Seguridad Perimetral,
+            asegurando una infraestructura robusta y segura para su empresa.
+          </p>
           <div className="row my-4">
-            {/* {CAMERAS.map(({ id, title, description, src, alt }) => (
-              <div
-                className="col-sm-12 col-md-3 d-flex justify-content-center"
-                key={id}
-              >
-                <CardFlip
-                  id={id}
-                  width={180}
-                  height={180}
-                  title={title}
-                  paragraph={description}
-                  src={src}
-                  alt={alt}
-                />
-              </div>
-            ))} */}
+            {/* <div className="col">
+              Cableado estructurado
+              <CardFlip
+                id={0}
+                width={180}
+                height={180}
+                title={"Video Portero"}
+                paragraph={
+                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
+                }
+                src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/structured%20cabling.jpeg?alt=media&token=92338666-e738-4555-a4f5-31e5b0348df2"
+                alt={"Equipo biométrico"}
+              />
+            </div> */}
+            <div className="col">
+              {/* Seguridad perimetral */}
+              <CarrouselBrand slides={BRANDS_SP} />
+            </div>
           </div>
-          <div>{/* <CarrouselBrand slides={BRANDS} /> */}</div>
         </div>
         <div id="virtualization">
           <p>
-            Virtualización: Asesoría e implementación en servicios de
+            <b>Virtualización</b>: Asesoría e implementación en servicios de
             visualización de tus servidores y micro servicios
           </p>
           <div className="row my-4">
@@ -159,12 +250,13 @@ export const ServiceInfraestructure = () => {
         </div>
         <div id="SO">
           <p>
-            Sistemas operativos: Asesoría e implementación de servicios en nube,
-            servidores, micro servicios, bases de datos
+            <b>Sistemas operativos</b>: Asesoría e implementación de servicios
+            en nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
             <div className="col">
-              {/* card tesst */}
+              <CarrouselBrand slides={BRANDS_SO} />
+              {/* card tesst
               <div
                 style={
                   {
@@ -182,27 +274,21 @@ export const ServiceInfraestructure = () => {
                     <hr />
                   </div>
                   <div className="items price">
-                    {/* <p className="old">$699</p>
-                    <p className="new">$345</p> */}
                     <p>
                       es la plataforma para crear una infraestructura de
                       aplicaciones, redes y servicios web conectados.
                     </p>{" "}
                   </div>
-                  {/* <div className="items cart">
-                    <i className="fa fa-shopping-cart"></i>
-                    <span>ADD TO CART</span>
-                  </div> */}
                 </div>
               </div>
-              {/* end */}
+              end */}
             </div>
           </div>
         </div>
         <div id="virtualization">
           <p>
-            Cloud Computing: Asesoría e implementación de servicios en nube,
-            servidores, micro servicios, bases de datos
+            <b>Cloud Computing</b>: Asesoría e implementación de servicios en
+            nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
             <div className="col">
@@ -212,19 +298,109 @@ export const ServiceInfraestructure = () => {
         </div>
         <div id="email">
           <p>
-            Ofimatica y correo: Asesoría e implementación de servicios en nube,
-            servidores, micro servicios, bases de datos
+            <b>Ofimatica y correo</b>: Asesoría e implementación de servicios en
+            nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
-            <div className="col">
-              {/* <CarrouselBrand slides={BRANDS} /> */}
+            <div className="d-flex">
+              <div
+                className="card mx-2"
+                style={{ width: "260px" } as React.CSSProperties}
+              >
+                <div style={{ height: "170px" } as React.CSSProperties}>
+                  <Image
+                    width={400}
+                    height={180}
+                    className="img-fluid"
+                    style={
+                      {
+                        objectFit: "cover",
+                        height: "100%",
+                      } as React.CSSProperties
+                    }
+                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fworkspace.png?alt=media&token=f0b1a66c-1453-4e1f-898c-8020e51dae03"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Google Workspace</h5>
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of thes content.
+                  </p>
+                  <a href="#" className="btn btn-primary">
+                    Mas información
+                  </a>
+                </div>
+              </div>
+              <div
+                className="card mx-2"
+                style={{ width: "260px" } as React.CSSProperties}
+              >
+                <div style={{ height: "170px" } as React.CSSProperties}>
+                  <Image
+                    width={300}
+                    height={200}
+                    className="img-fluid"
+                    style={
+                      {
+                        objectFit: "cover",
+                        height: "100%",
+                      } as React.CSSProperties
+                    }
+                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Foffice-365.png?alt=media&token=367f5837-386a-45b0-89a3-27567f587003"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Office 365</h5>
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of thes content.
+                  </p>
+                  <a href="#" className="btn btn-primary">
+                    Mas información
+                  </a>
+                </div>
+              </div>
+              <div
+                className="card mx-2"
+                style={{ width: "260px" } as React.CSSProperties}
+              >
+                <div style={{ height: "170px" } as React.CSSProperties}>
+                  <Image
+                    width={300}
+                    height={200}
+                    style={
+                      {
+                        objectFit: "cover",
+                        height: "100%",
+                      } as React.CSSProperties
+                    }
+                    className="img-fluid"
+                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fzimbra2.jpg?alt=media&token=8e590869-449d-4589-a07b-ca65a9aa6ad8"
+                    alt="Card image cap"
+                  />
+                </div>
+
+                <div className="card-body">
+                  <h5 className="card-title">Zimbra</h5>
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of thes content.
+                  </p>
+                  <a href="#" className="btn btn-primary">
+                    Mas información
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div id="helpdesk">
           <p>
-            Monitoreo y Helpdesk: Asesoría e implementación de servicios en
-            nube, servidores, micro servicios, bases de datos
+            <b>Monitoreo y Helpdesk</b>: Asesoría e implementación de servicios
+            en nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
             <div className="col">
