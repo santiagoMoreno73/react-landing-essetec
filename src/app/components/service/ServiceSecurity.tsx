@@ -75,7 +75,7 @@ export const ServiceSecurity = () => {
       <div className="my-3">
         <div id="CCTV">
           <p>
-            CCTV: instalación de equipos conectados genera un circuito de
+            <b>CCTV</b>: instalación de equipos conectados genera un circuito de
             imágenes que solo pueden ser visualizadas por un grupo determinado
             de personas. Estas se personalizan para adaptarse a las necesidades
             específicas de cada cliente, ya sea en seguridad, vigilancia o
@@ -105,8 +105,8 @@ export const ServiceSecurity = () => {
         </div>
         <div id="Biométricos">
           <p>
-            BIOMETRICOS: Sistemas de control de acceso, registros de control de
-            ingreso personal o personal autorizado.
+            <b>Biométricos</b>: Sistemas de control de acceso, registros de
+            control de ingreso personal o personal autorizado.
           </p>
           <div className="row my-4">
             <div className="col">
