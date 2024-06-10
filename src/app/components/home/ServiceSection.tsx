@@ -30,7 +30,7 @@ const SERVICES = [
   {
     title: "Desarrollo web",
     description:
-      "Nuestro servicio web se enorgullece de ofrecer soluciones eficientes y seguras para cubrir todas tus necesidades en línea.",
+      "Nuestro servicio web se enorgullece de ofrecer soluciones eficientes y seguras para cubrir todas tus necesidades en línea de manera optimá y segura",
     options: {
       color: "web",
       icon: <MdWeb className="color-web" />,
