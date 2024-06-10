@@ -11,8 +11,8 @@ export const CardFlip = ({ id, width, height, title, paragraph, src, alt }) => {
         height: `${height}px`,
       }}
     >
-      <div className="card">
-        <div className="front">
+      <div className="card-flip">
+        <div className="front blue-gradient">
           <div className="content">
             <h5 className="small-title">{title}</h5>
             <Image
