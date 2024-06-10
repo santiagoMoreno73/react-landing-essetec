@@ -49,7 +49,7 @@ export const ServiceDetail = () => {
                 <span className={`avatar avatar-sm bg-custom-${color} font-20`}>
                   {icon}
                 </span>
-                <h6 className="small-title mx-2">{title}</h6>
+                <h6 className="mb-0 mx-2">{title}</h6>
               </div>
             </div>
             <div className="p-4">
