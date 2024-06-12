@@ -6,7 +6,7 @@ import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { HeroSection } from "../components/ui";
 import { ServiceDetail } from "../components/service/ServiceDetail";
 import { ServiceSecurity } from "../components/service/ServiceSecurity";
-import { ServiceInfraestructure } from "../components/service";
+import { ServiceInfraestructure, ServiceWeb } from "../components/service";
 
 // import { ServiceDetail } from "../components/service/ServiceDetail";
 
@@ -132,7 +132,9 @@ export default function ServicePage({ params }) {
                 )}
 
                 {currentService.id == "web" && (
-                  <section id="web">{/* <ServiceInfraestructure /> */}</section>
+                  <section id="web">
+                    <ServiceWeb />
+                  </section>
                 )}
               </div>
             </div>
