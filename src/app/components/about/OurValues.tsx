@@ -29,7 +29,14 @@ const values = [
 
 export const OurValues = () => {
   return (
-    <section className="section bg-custom-light" id="mision">
+    <section
+      className="section bg-custom-light"
+      id="mision"
+      style={{
+        backgroundImage: `url(${"/images/background_grey.png"})`,
+        backgroundPosition: "bottom",
+      }}
+    >
       <div className="container">
         <div className="text-center mb-5">
           <h3 className="text-primary text-uppercase">Nuestros Valores</h3>

@@ -40,7 +40,14 @@ export const SolutionSection = () => {
   const reduceMotion = false;
 
   return (
-    <section className="section bg-primary" id="solutions">
+    <section
+      className="section bg-primary"
+      id="solutions"
+      style={{
+        backgroundImage: `url(${"/images/background_blue.png"})`,
+        backgroundPosition: "bottom",
+      }}
+    >
       <div className="container">
         <div className="row" id="counter">
           {SOLUTIONS.map((solution, index) => (

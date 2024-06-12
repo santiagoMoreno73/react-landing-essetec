@@ -41,7 +41,14 @@ const SERVICES = [
 
 export const ServiceSection = () => {
   return (
-    <section className="section bg-custom-light" id="services">
+    <section
+      className="section bg-custom-light"
+      id="services"
+      style={{
+        backgroundImage: `url(${"/images/background_grey.png"})`,
+        backgroundPosition: "bottom",
+      }}
+    >
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">

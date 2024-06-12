@@ -46,7 +46,14 @@ const CLIENTS = [
 
 export const ClientsSection = () => {
   return (
-    <section className="section bg-custom-light" id="clients">
+    <section
+      className="section bg-custom-light"
+      id="clients"
+      style={{
+        backgroundImage: `url(${"/images/world.png"})`,
+        backgroundPosition: "bottom",
+      }}
+    >
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">
