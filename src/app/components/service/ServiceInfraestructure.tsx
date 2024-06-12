@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CardFlip, CarrouselBrand } from "../ui";
-import "./test.css";
 
 const BRANDS_SP = [
   {
@@ -197,6 +196,27 @@ const BRANDS_SO = [
   },
 ];
 
+const CARDS_OM = [
+  {
+    id: 0,
+    title: "Google Workspace",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fworkspace.png?alt=media&token=f0b1a66c-1453-4e1f-898c-8020e51dae03",
+    alt: "GoogleWorkspace-logo",
+  },
+  {
+    id: 1,
+    title: "Office-365",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Foffice-365.png?alt=media&token=367f5837-386a-45b0-89a3-27567f587003",
+    alt: "Office-36-logo",
+  },
+  {
+    id: 2,
+    title: "Zimbra",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fzimbra2.jpg?alt=media&token=8e590869-449d-4589-a07b-ca65a9aa6ad8",
+    alt: "Zimbra-logo",
+  },
+];
+
 export const ServiceInfraestructure = () => {
   return (
     <div id="infraestructure">
@@ -256,32 +276,6 @@ export const ServiceInfraestructure = () => {
           <div className="row my-4">
             <div className="col">
               <CarrouselBrand slides={BRANDS_SO} />
-              {/* card tesst
-              <div
-                style={
-                  {
-                    backgroundImage: `url(
-                      "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/windows-server-microsoft-operating-system-microsoft-windows-technology-hd-wallpaper-preview.jpg?alt=media&token=5b375fd5-014e-407f-b945-71ee37001808"
-                    )`,
-                  } as React.CSSProperties
-                }
-                className="container-c"
-              >
-                <div className="overlay">
-                  <div className="items"></div>
-                  <div className="items head">
-                    <p>Windows Server</p>
-                    <hr />
-                  </div>
-                  <div className="items price">
-                    <p>
-                      es la plataforma para crear una infraestructura de
-                      aplicaciones, redes y servicios web conectados.
-                    </p>{" "}
-                  </div>
-                </div>
-              </div>
-              end */}
             </div>
           </div>
         </div>
@@ -302,109 +296,53 @@ export const ServiceInfraestructure = () => {
             nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
-            <div className="d-flex">
-              <div
-                className="card mx-2"
-                style={{ width: "260px" } as React.CSSProperties}
-              >
-                <div style={{ height: "170px" } as React.CSSProperties}>
-                  <Image
-                    width={400}
-                    height={180}
-                    className="img-fluid"
-                    style={
-                      {
-                        objectFit: "cover",
-                        height: "100%",
-                      } as React.CSSProperties
-                    }
-                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fworkspace.png?alt=media&token=f0b1a66c-1453-4e1f-898c-8020e51dae03"
-                    alt="Card image cap"
-                  />
+            {CARDS_OM.map((card) => (
+              <>
+                {" "}
+                <div className="col-md-4 d-flex justify-content-center">
+                  <div
+                    className="card m-2"
+                    style={{ width: "260px" } as React.CSSProperties}
+                  >
+                    <div style={{ height: "170px" } as React.CSSProperties}>
+                      <Image
+                        width={400}
+                        height={180}
+                        className="img-fluid"
+                        style={
+                          {
+                            objectFit: "cover",
+                            height: "100%",
+                          } as React.CSSProperties
+                        }
+                        src={card.src}
+                        alt={card.alt}
+                      />
+                    </div>
+                    <div className="card-body">
+                      <h5 className="card-title">{card.title}</h5>
+                      <p className="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of thes content.
+                      </p>
+                      <a href="#" className="btn btn-primary">
+                        Mas información
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="card-body">
-                  <h5 className="card-title">Google Workspace</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of thes content.
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    Mas información
-                  </a>
-                </div>
-              </div>
-              <div
-                className="card mx-2"
-                style={{ width: "260px" } as React.CSSProperties}
-              >
-                <div style={{ height: "170px" } as React.CSSProperties}>
-                  <Image
-                    width={300}
-                    height={200}
-                    className="img-fluid"
-                    style={
-                      {
-                        objectFit: "cover",
-                        height: "100%",
-                      } as React.CSSProperties
-                    }
-                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Foffice-365.png?alt=media&token=367f5837-386a-45b0-89a3-27567f587003"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">Office 365</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of thes content.
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    Mas información
-                  </a>
-                </div>
-              </div>
-              <div
-                className="card mx-2"
-                style={{ width: "260px" } as React.CSSProperties}
-              >
-                <div style={{ height: "170px" } as React.CSSProperties}>
-                  <Image
-                    width={300}
-                    height={200}
-                    style={
-                      {
-                        objectFit: "cover",
-                        height: "100%",
-                      } as React.CSSProperties
-                    }
-                    className="img-fluid"
-                    src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fzimbra2.jpg?alt=media&token=8e590869-449d-4589-a07b-ca65a9aa6ad8"
-                    alt="Card image cap"
-                  />
-                </div>
-
-                <div className="card-body">
-                  <h5 className="card-title">Zimbra</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of thes content.
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    Mas información
-                  </a>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
-        </div>
-        <div id="helpdesk">
-          <p>
-            <b>Monitoreo y Helpdesk</b>: Asesoría e implementación de servicios
-            en nube, servidores, micro servicios, bases de datos
-          </p>
-          <div className="row my-4">
-            <div className="col">
-              <CarrouselBrand slides={BRANDS_MH} />
+          <div id="helpdesk">
+            <p>
+              <b>Monitoreo y Helpdesk</b>: Asesoría e implementación de
+              servicios en nube, servidores, micro servicios, bases de datos
+            </p>
+            <div className="row my-4">
+              <div className="col">
+                <CarrouselBrand slides={BRANDS_MH} />
+              </div>
             </div>
           </div>
         </div>
