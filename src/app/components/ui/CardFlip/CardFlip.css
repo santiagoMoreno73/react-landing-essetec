@@ -1,13 +1,17 @@
 @import "../../../variables.css";
 
-p {
+/* p {
   color: var(--muted);
   font-size: small;
-}
+} */
 .flip-container {
   background: transparent;
   perspective: 1000px;
   margin: 12px;
+}
+.flip-container p {
+  color: var(--muted);
+  font-size: small;
 }
 .card-flip {
   position: relative;

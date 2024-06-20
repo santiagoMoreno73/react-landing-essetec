@@ -2,10 +2,14 @@ import Image from "next/image";
 import "./CarrouselBrand.css";
 
 export const CarrouselBrand = ({ slides }) => {
+  const numSlides = slides.length;
   const duplicatedSlides = [...slides, ...slides];
   return (
     <div className="slider">
-      <div className="slide-track">
+      <div
+        className="slide-track"
+        style={{ width: `calc(250px * ${numSlides})` }}
+      >
         {duplicatedSlides.map(({ id, src, alt }, index) => (
           <div key={index} className="slide">
             <Image

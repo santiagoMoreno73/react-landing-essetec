@@ -25,7 +25,7 @@ const serviceDetail = [
     color: "web",
     icon: <MdWeb className="color-white" />,
     paragraph:
-      "Ofrecemos servicios de desarrollo web personalizados para impulsar su presencia en línea. Nuestro equipo de desarrolladores crea sitios web atractivos, funcionales y optimizados para SEO que reflejan la identidad de su marca y cumplen con sus objetivos comerciales. Ya sea que necesite un sitio web corporativo, una tienda en línea o una aplicación web personalizada, estamos aquí para ayudarle a alcanzar sus metas digitales.",
+      "Ofrecemos servicios de desarrollo web personalizados para impulsar su presencia en línea. Nuestro equipo de desarrolladores crea sitios web atractivos, funcionales y optimizados para SEO que reflejan la identidad de su marca y cumplen con sus objetivos comerciales. Estamos aquí para ayudarle a alcanzar sus metas digitales.",
   },
 ];
 
@@ -33,6 +33,7 @@ export const ServiceDetail = () => {
   return (
     <div>
       <h4>Servicios</h4>
+      <hr />
       <p>
         En nuestra empresa, nos dedicamos a proporcionar soluciones integrales
         que cubren diversas necesidades tecnológicas y de seguridad. Con un
@@ -53,7 +54,7 @@ export const ServiceDetail = () => {
               </div>
             </div>
             <div className="p-4">
-              <p className="card-text">{paragraph}</p>
+              <p>{paragraph}</p>
             </div>
           </div>
         ))}

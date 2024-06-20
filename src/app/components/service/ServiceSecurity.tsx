@@ -66,6 +66,7 @@ export const ServiceSecurity = () => {
   return (
     <>
       <h4>Seguridad electrónica</h4>
+      <hr />
       <p>
         Los sistemas de seguridad electrónica ayudan a prevenir pérdidas,
         controlan los accesos no autorizados y mejoran la capacidad de reacción

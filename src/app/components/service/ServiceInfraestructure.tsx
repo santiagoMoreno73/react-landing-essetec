@@ -221,6 +221,7 @@ export const ServiceInfraestructure = () => {
   return (
     <div id="infraestructure">
       <h4>Infraestructura & Outsorcing de tecnología</h4>
+      <hr />
       <p>
         Proporcionar servicios esenciales de infraestructura y outsourcing de
         tecnología, redes seguras, almacenamiento de datos confiable, gestión de
@@ -296,42 +297,42 @@ export const ServiceInfraestructure = () => {
             nube, servidores, micro servicios, bases de datos
           </p>
           <div className="row my-4">
-            {CARDS_OM.map((card) => (
-              <>
-                {" "}
-                <div className="col-md-4 d-flex justify-content-center">
-                  <div
-                    className="card m-2"
-                    style={{ width: "260px" } as React.CSSProperties}
-                  >
-                    <div style={{ height: "170px" } as React.CSSProperties}>
-                      <Image
-                        width={400}
-                        height={180}
-                        className="img-fluid"
-                        style={
-                          {
-                            objectFit: "cover",
-                            height: "100%",
-                          } as React.CSSProperties
-                        }
-                        src={card.src}
-                        alt={card.alt}
-                      />
-                    </div>
-                    <div className="card-body">
-                      <h5 className="card-title">{card.title}</h5>
-                      <p className="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of thes content.
-                      </p>
-                      <a href="#" className="btn btn-primary">
-                        Mas información
-                      </a>
-                    </div>
+            {CARDS_OM.map((card, index) => (
+              <div
+                key={index}
+                className="col-md-4 d-flex justify-content-center"
+              >
+                <div
+                  className="card m-2"
+                  style={{ width: "260px" } as React.CSSProperties}
+                >
+                  <div style={{ height: "170px" } as React.CSSProperties}>
+                    <Image
+                      width={400}
+                      height={180}
+                      className="img-fluid"
+                      style={
+                        {
+                          objectFit: "cover",
+                          height: "100%",
+                        } as React.CSSProperties
+                      }
+                      src={card.src}
+                      alt={card.alt}
+                    />
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title">{card.title}</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of thes content.
+                    </p>
+                    <a href="#" className="btn btn-primary">
+                      Mas información
+                    </a>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <div id="helpdesk">

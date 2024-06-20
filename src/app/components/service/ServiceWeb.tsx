@@ -1,4 +1,5 @@
 import { CardFlip, CarrouselBrand } from "../ui";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const CAMERAS = [
   {
@@ -64,67 +65,70 @@ const BRANDS = [
 
 export const ServiceWeb = () => {
   return (
-    <>
-      <h4>Servicio Web</h4>
+    <div id="infraestructure">
+      <h4>Desarrollo Web</h4>
+      <hr />
       <p>
-        Los sistemas de seguridad electrónica ayudan a prevenir pérdidas,
-        controlan los accesos no autorizados y mejoran la capacidad de reacción
-        para evitar o mitigar las amenazas que puedan surgir.
+        Proporcionar servicios esenciales de infraestructura y outsourcing de
+        tecnología, redes seguras, almacenamiento de datos confiable, gestión de
+        servidores eficiente, soporte técnico continuo.
       </p>
 
       <div className="my-3">
-        <div id="CCTV">
+        <div id="network" className="d-flex align-items-center">
           <p>
-            <b>CCTV</b>: instalación de equipos conectados genera un circuito de
-            imágenes que solo pueden ser visualizadas por un grupo determinado
-            de personas. Estas se personalizan para adaptarse a las necesidades
-            específicas de cada cliente, ya sea en seguridad, vigilancia o
-            mejora de servicios.
+            <FaCircleCheck
+              style={{ color: "#2f55d4", verticalAlign: "text-top" }}
+            />{" "}
+            <b>Desarrollo Web Corporativo</b>: Creamos sitios web corporativos
+            que proyectan una imagen profesional y moderna de su empresa. Nos
+            aseguramos de que su sitio web sea intuitivo, fácil de navegar y
+            refleje los valores y la misión de su empresa.
           </p>
-          <div className="row my-4">
-            {CAMERAS.map(({ id, title, description, src, alt }) => (
-              <div
-                className="col-sm-12 col-md-3 d-flex justify-content-center"
-                key={id}
-              >
-                <CardFlip
-                  id={id}
-                  width={180}
-                  height={180}
-                  title={title}
-                  paragraph={description}
-                  src={src}
-                  alt={alt}
-                />
-              </div>
-            ))}
-          </div>
-          <div>
-            <CarrouselBrand slides={BRANDS} />
-          </div>
         </div>
-        <div id="Biométricos">
+        <div id="virtualization" className="d-flex align-items-center">
           <p>
-            <b>Biométricos</b>: Sistemas de control de acceso, registros de
-            control de ingreso personal o personal autorizado.
+            <FaCircleCheck
+              style={{ color: "#2f55d4", verticalAlign: "text-top" }}
+            />{" "}
+            <b>Optimización para Motores de Búsqueda (SEO)</b>: Nos aseguramos
+            de que su sitio web esté optimizado para los motores de búsqueda
+            desde el primer día. Implementamos las mejores prácticas de SEO para
+            mejorar su visibilidad en línea y atraer tráfico orgánico de calidad
+            a su sitio.
           </p>
-          <div className="row my-4">
-            <div className="col">
-              <CardFlip
-                id={0}
-                width={180}
-                height={180}
-                title={"Video Portero"}
-                paragraph={
-                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
-                }
-                src={"/images/services/videoportero.png"}
-                alt={"Equipo biométrico"}
-              />
-            </div>
-          </div>
+        </div>
+        <div id="SO" className="d-flex align-items-center">
+          <p>
+            <FaCircleCheck
+              style={{ color: "#2f55d4", verticalAlign: "text-top" }}
+            />{" "}
+            <b>Diseño Responsivo</b>: Todos nuestros desarrollos son
+            completamente responsivos, lo que garantiza que su sitio web se vea
+            y funcione perfectamente en cualquier dispositivo, ya sea un
+            escritorio, una tableta o un teléfono móvil.
+          </p>
+        </div>
+        <div id="virtualization" className="d-flex align-items-center">
+          <p>
+            <FaCircleCheck
+              style={{ color: "#2f55d4", verticalAlign: "text-top" }}
+            />{" "}
+            <b>Mantenimiento y Soporte Continuo</b>: Ofrecemos servicios de
+            mantenimiento y soporte continuo para asegurarnos de que su sitio
+            web esté siempre actualizado y funcione sin problemas. Nuestro
+            equipo está disponible para resolver cualquier problema técnico y
+            realizar mejoras cuando sea necesario.
+          </p>
+        </div>
+        <div id="email">
+          <p>
+            Permítanos ser su socio en el desarrollo de su presencia digital.
+            Contáctenos para discutir sus necesidades específicas y cómo podemos
+            ayudarle a alcanzar sus objetivos.
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
