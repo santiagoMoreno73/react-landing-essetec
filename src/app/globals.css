@@ -22,7 +22,6 @@ h4,
 h5,
 h6 {
   color: #343a40;
-  font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
 
@@ -33,7 +32,7 @@ a {
 
 p {
   line-height: 1.8;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .list-none {
