@@ -41,6 +41,7 @@ const CLIENTS = [
   {
     name: "client-1",
     src: "/images/logos/clients/client-1.jpeg",
+    href: "https://www.instagram.com/leds_storeimportador/?igsh=MzRhcDhqaW44MHlp",
   },
 ];
 
@@ -80,14 +81,16 @@ export const ClientsSection = () => {
         <div className="row mt-5">
           {CLIENTS.map((client, index) => (
             <div className="col text-center" key={index}>
-              <Image
-                className="img-opacity img-radius-20"
-                src={client.src}
-                alt="logo client"
-                width={160}
-                height={100}
-                priority
-              />
+              <a href={client.href} target="_blank">
+                <Image
+                  className="img-opacity img-radius-20"
+                  src={client.src}
+                  alt="logo client"
+                  width={160}
+                  height={100}
+                  priority
+                />
+              </a>
             </div>
           ))}
         </div>
