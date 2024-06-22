@@ -49,7 +49,7 @@ const CLIENTS = [
 
 export const ClientsSection = () => {
   return (
-    <section className="section bg-custom-light bg-world" id="clients">
+    <section className="section bg-world" id="clients">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">

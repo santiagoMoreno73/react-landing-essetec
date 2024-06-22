@@ -1,9 +1,3 @@
-@import "../../../variables.css";
-
-/* p {
-  color: var(--muted);
-  font-size: small;
-} */
 .flip-container {
   background: transparent;
   perspective: 1000px;

@@ -29,20 +29,10 @@ const values = [
 
 export const OurValues = () => {
   return (
-    <section
-      className="section bg-custom-light"
-      id="mision"
-      style={{
-        backgroundImage: `url(${"/images/background_grey.png"})`,
-        backgroundPosition: "bottom",
-      }}
-    >
+    <section className="section bg-tech-grey bg-bottom" id="mision">
       <div className="container">
         <div className="text-center mb-5">
           <h3 className="text-primary text-uppercase">Nuestros Valores</h3>
-          {/* <p>
-            It will be as simple as occidental in fact, it will be Occidental.
-          </p> */}
         </div>
         <div className="row">
           {values.map(({ name, icon }, i) => (
