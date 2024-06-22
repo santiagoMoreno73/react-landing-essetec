@@ -44,19 +44,19 @@ export const ServiceWeb = () => {
 
       <div className="my-3">
         <div className="accordion" id="accordionPanelsStay">
-          {WEB_SERVICES.map(({ id, title, content }) => (
+          {WEB_SERVICES.map(({ id, id_item, title, content }) => (
             <div key={`${id}-item`} className="accordion-item">
               <h2
                 className="accordion-header"
-                id={`panelsStayOpen-heading${id}`}
+                id={`panelsStayOpen-heading${id_item}`}
               >
                 <button
-                  className="accordion-button"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target={`#panelsStayOpen-collapse${id}`}
-                  aria-expanded="true"
-                  aria-controls={`panelsStayOpen-collapse${id}`}
+                  data-bs-target={`#panelsStayOpen-collapse${id_item}`}
+                  aria-expanded="false"
+                  aria-controls={`panelsStayOpen-collapse${id_item}`}
                 >
                   <FaCircleCheck
                     style={{
@@ -70,9 +70,9 @@ export const ServiceWeb = () => {
                 </button>
               </h2>
               <div
-                id={`panelsStayOpen-collapse${id}`}
-                className="accordion-collapse collapse show"
-                aria-labelledby={`panelsStayOpen-heading${id}`}
+                id={`panelsStayOpen-collapse${id_item}`}
+                className="accordion-collapse collapse"
+                aria-labelledby={`panelsStayOpen-heading${id_item}`}
               >
                 <div className="accordion-body">{content}</div>
               </div>
