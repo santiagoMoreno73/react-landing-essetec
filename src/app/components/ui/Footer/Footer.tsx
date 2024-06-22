@@ -51,7 +51,7 @@ export const Footer = () => {
                   <Link href="/services">Servicios</Link>
                 </li>
                 <li>
-                  <Link href="/#features">Caráteristicas</Link>
+                  <Link href="/#features">Características</Link>
                 </li>
                 <li>
                   <Link href="/#clients">Clientes</Link>

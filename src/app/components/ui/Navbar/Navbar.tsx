@@ -15,7 +15,7 @@ import "./Navbar.css";
 const NAVLINKS = [
   { title: "Inicio", path: "/" },
   { title: "Servicios", path: "/services" },
-  { title: "Carácteristicas", path: "/#features" },
+  { title: "Características", path: "/#features" },
   { title: "Clientes", path: "/#clients" },
   { title: "Acerca de nosotros", path: "/about" },
 ];
