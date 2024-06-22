@@ -127,6 +127,23 @@ p {
   background: #0cbccc;
 }
 
+.bg-world {
+  background-image: url("/images/world.png");
+  background-size: cover;
+}
+
+.bg-tech-grey {
+  background-image: url("/images/background_grey.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-tech-blue {
+  background-image: url("/images/background_blue.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .icons-sm {
   height: 16px;
   width: 16px;

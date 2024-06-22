@@ -1,6 +1,8 @@
 "use client";
+//  components
 import { EmblaOptionsType } from "embla-carousel";
 import { Carrousel } from "../ui/Carrousel/Carrousel";
+// next image
 import Image from "next/image";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -47,14 +49,7 @@ const CLIENTS = [
 
 export const ClientsSection = () => {
   return (
-    <section
-      className="section bg-custom-light"
-      id="clients"
-      style={{
-        backgroundImage: `url(${"/images/world.png"})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="section bg-custom-light bg-world" id="clients">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">
@@ -62,10 +57,6 @@ export const ClientsSection = () => {
               <h5 className="h3 text-primary text-uppercase">
                 Nuestras Historias de Éxito
               </h5>
-              {/* <h4 className="mb-3">
-                Descubre lo que nuestros clientes tienen que decir sobre
-                nosotros
-              </h4> */}
               <p>
                 Desde instalaciones impresionantes hasta trabajos excepcionales,
                 cada testimonio cuenta una historia de satisfacción y éxito.

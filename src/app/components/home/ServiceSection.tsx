@@ -3,9 +3,9 @@
 import { GiCctvCamera } from "react-icons/gi";
 import { IoServer } from "react-icons/io5";
 import { MdWeb } from "react-icons/md";
-
+// components
 import { CardService } from "./CardService";
-import { Carrousel, CarrouselBrand } from "../ui";
+import { CarrouselBrand } from "../ui";
 
 const SERVICES = [
   {
@@ -249,15 +249,7 @@ const BRANDS = [
 
 export const ServiceSection = () => {
   return (
-    <section
-      className="section bg-custom-light"
-      id="services"
-      style={{
-        backgroundImage: `url(${"/images/background_grey.png"})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="section bg-custom-light bg-tech-grey" id="services">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">
