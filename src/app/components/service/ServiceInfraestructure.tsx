@@ -200,18 +200,27 @@ const CARDS_OM = [
   {
     id: 0,
     title: "Google Workspace",
+    description:
+      "Conjunto de aplicaciones de productividad y colaboración en la nube de Google, que incluye Gmail, Google Drive, Google Docs, y Google Meet.",
+    href: "https://workspace.google.com/intl/es-419/",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fworkspace.png?alt=media&token=f0b1a66c-1453-4e1f-898c-8020e51dae03",
     alt: "GoogleWorkspace-logo",
   },
   {
     id: 1,
     title: "Office-365",
+    description:
+      "Microsoft 365, es un servicio de suscripción de Microsoft que ofrece aplicaciones de Office como Word, Excel y PowerPoint, junto con servicios en la nube.",
+    href: "https://www.microsoft.com/es-co/microsoft-365/what-is-microsoft-365",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Foffice-365.png?alt=media&token=367f5837-386a-45b0-89a3-27567f587003",
     alt: "Office-36-logo",
   },
   {
     id: 2,
     title: "Zimbra",
+    description:
+      "Plataforma de correo electrónico y colaboración de código abierto que ofrece funcionalidades como email, calendario y gestión de contactos.",
+    href: "https://www.zimbra-support.net/index.php/es/",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fzimbra2.jpg?alt=media&token=8e590869-449d-4589-a07b-ca65a9aa6ad8",
     alt: "Zimbra-logo",
   },
@@ -238,22 +247,7 @@ export const ServiceInfraestructure = () => {
             asegurando una infraestructura robusta y segura para su empresa.
           </p>
           <div className="row my-4">
-            {/* <div className="col">
-              Cableado estructurado
-              <CardFlip
-                id={0}
-                width={180}
-                height={180}
-                title={"Video Portero"}
-                paragraph={
-                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
-                }
-                src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/structured%20cabling.jpeg?alt=media&token=92338666-e738-4555-a4f5-31e5b0348df2"
-                alt={"Equipo biométrico"}
-              />
-            </div> */}
             <div className="col">
-              {/* Seguridad perimetral */}
               <CarrouselBrand slides={BRANDS_SP} />
             </div>
           </div>
@@ -261,7 +255,7 @@ export const ServiceInfraestructure = () => {
         <div id="virtualization">
           <p>
             <b>Virtualización</b>: Asesoría e implementación en servicios de
-            visualización de tus servidores y micro servicios
+            visualización de tus servidores y micro servicios.
           </p>
           <div className="row my-4">
             <div className="col">
@@ -271,8 +265,8 @@ export const ServiceInfraestructure = () => {
         </div>
         <div id="SO">
           <p>
-            <b>Sistemas operativos</b>: Asesoría e implementación de servicios
-            en nube, servidores, micro servicios, bases de datos
+            <b>Sistemas operativos</b>: Asesoría e implementación en la gestión
+            y optimización de tus sistemas operativos y entornos de software.
           </p>
           <div className="row my-4">
             <div className="col">
@@ -282,8 +276,9 @@ export const ServiceInfraestructure = () => {
         </div>
         <div id="virtualization">
           <p>
-            <b>Cloud Computing</b>: Asesoría e implementación de servicios en
-            nube, servidores, micro servicios, bases de datos
+            <b>Cloud Computing</b>: Asesoría e implementación en servicios de
+            computación en la nube para mejorar la escalabilidad y eficiencia de
+            tu infraestructura.
           </p>
           <div className="row my-4">
             <div className="col">
@@ -293,8 +288,9 @@ export const ServiceInfraestructure = () => {
         </div>
         <div id="email">
           <p>
-            <b>Ofimatica y correo</b>: Asesoría e implementación de servicios en
-            nube, servidores, micro servicios, bases de datos
+            <b>Ofimatica y correo</b>: Asesoría e implementación en herramientas
+            de ofimática y soluciones de correo electrónico para mejorar la
+            productividad de tu equipo.
           </p>
           <div className="row my-4">
             {CARDS_OM.map((card, index) => (
@@ -321,15 +317,21 @@ export const ServiceInfraestructure = () => {
                       alt={card.alt}
                     />
                   </div>
-                  <div className="card-body">
+                  <div
+                    className="card-body d-flex"
+                    style={{ flexWrap: "wrap" }}
+                  >
                     <h5 className="card-title">{card.title}</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of thes content.
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                      Mas información
-                    </a>
+                    <p className="card-text">{card.description}</p>
+                    <div>
+                      <a
+                        href={card.href}
+                        target="_blank"
+                        className="btn btn-primary "
+                      >
+                        Mas información
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -337,8 +339,9 @@ export const ServiceInfraestructure = () => {
           </div>
           <div id="helpdesk">
             <p>
-              <b>Monitoreo y Helpdesk</b>: Asesoría e implementación de
-              servicios en nube, servidores, micro servicios, bases de datos
+              <b>Monitoreo y Helpdesk</b>: Asesoría e implementación en sistemas
+              de monitoreo y helpdesk para garantizar el rendimiento y soporte
+              continuo de tus servicios.
             </p>
             <div className="row my-4">
               <div className="col">
