@@ -4,8 +4,7 @@ import { GiCctvCamera } from "react-icons/gi";
 import { IoServer } from "react-icons/io5";
 import { MdWeb } from "react-icons/md";
 // components
-import { CardService } from "./CardService";
-import { CarrouselBrand } from "../ui";
+import { CardDetail, CarrouselBrand } from "../ui";
 
 const SERVICES = [
   {
@@ -249,7 +248,7 @@ const BRANDS = [
 
 export const ServiceSection = () => {
   return (
-    <section className="section bg-custom-light bg-tech-grey" id="services">
+    <section className="section bg-tech-grey bg-center" id="services">
       <div className="container">
         <div className="justify-content-center row">
           <div className="col-lg-8">
@@ -267,17 +266,16 @@ export const ServiceSection = () => {
         <div className="row">
           {SERVICES.map(({ title, description, options }, index) => (
             <div key={index} className="col-lg-4 col-md-6">
-              <CardService
+              <CardDetail
                 title={title}
                 description={description}
                 options={options}
               />
             </div>
           ))}
-
-          <div className="col mt-4">
-            <CarrouselBrand slides={BRANDS} />
-          </div>
+        </div>
+        <div className="mt-5">
+          <CarrouselBrand slides={BRANDS} />
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-export { CardService } from "./CardService"
 export { ClientsSection } from "./ClientsSection"
 export { FeaturesSection } from "./FeaturesSection"
 export { ServiceSection } from "./ServiceSection"
