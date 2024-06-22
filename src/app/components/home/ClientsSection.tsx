@@ -52,7 +52,7 @@ export const ClientsSection = () => {
       id="clients"
       style={{
         backgroundImage: `url(${"/images/world.png"})`,
-        backgroundPosition: "bottom",
+        backgroundSize: "cover",
       }}
     >
       <div className="container">

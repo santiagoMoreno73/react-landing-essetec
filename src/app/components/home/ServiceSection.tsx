@@ -254,7 +254,8 @@ export const ServiceSection = () => {
       id="services"
       style={{
         backgroundImage: `url(${"/images/background_grey.png"})`,
-        backgroundPosition: "bottom",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <div className="container">
@@ -262,7 +263,6 @@ export const ServiceSection = () => {
           <div className="col-lg-8">
             <div className="text-center mb-5">
               <h3 className="text-primary text-uppercase">Servicios</h3>
-              {/* <h4 className="mb-3">Explora Nuestros Servicios</h4> */}
               <p>
                 Descubre una amplia gama de servicios diseñados para satisfacer
                 tus necesidades. Desde desarrollo web hasta consultoría en
