@@ -35,10 +35,20 @@ export const Footer = () => {
               <h5 className="mb-4 footer-list-title">Legal</h5>
               <ul className="list-unstyled footer-list-menu">
                 <li>
-                  <Link href="/about">Terminos</Link>
+                  <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/10jNh6PTEAmQfzkRW0_6BKm-7kPeC83pK/view?usp=sharing"
+                  >
+                    Terminos
+                  </a>
                 </li>
                 <li>
-                  <Link href="/about">Privacidad</Link>
+                  <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1gJpQ-tpH64rSLArGnYWGfQGIQLy2AI6U/view?usp=drive_link"
+                  >
+                    Privacidad
+                  </a>
                 </li>
               </ul>
             </div>
@@ -61,7 +71,7 @@ export const Footer = () => {
           </div>
           <div className="col-sm-6 col-lg-3">
             <h5 className="footer-list-title mb-4">
-              Contacto (+57 3202063747)
+              Contacto (+57 312 5171049)
             </h5>
 
             <div className="d-flex align-items-center">
