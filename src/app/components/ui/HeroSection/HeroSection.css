@@ -11,6 +11,10 @@
   background-size: cover !important;
   background-position: center !important;
 }
+.hero-logo {
+  width: auto;
+  height: 50%;
+}
 .hero-content {
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -22,10 +26,15 @@
 }
 .hero-wrapper {
   position: absolute;
+  height: 80vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .hero-video {
   position: absolute;
@@ -46,16 +55,35 @@
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 320px) and (max-width: 1280px) {
   .hero-container {
     height: 100vh;
   }
-
   .hero-image {
     height: 100vh;
   }
-
+  .hero-wrapper {
+    transform: translate(-50%, -45%);
+  }
+  .hero-wrapper .hero-logo {
+    max-height: 300px;
+  }
   .hero-title {
-    font-size: 32px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hero-title {
+    font-size: 26px;
   }
 }

@@ -41,7 +41,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
             <div className="hero-content"></div>
             <div className="hero-wrapper text-center mb-4">
               <Image
-                className="img-fluid"
+                className="hero-logo"
                 src="/images/logos/logo_bl2.png"
                 width={330}
                 height={380}
@@ -63,7 +63,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
                   </b>
                 </span>
               </h1>
-              <p className="font-22 text-white">{description}</p>
+              <p className="hero-text font-22 text-white">{description}</p>
             </div>
           </div>
         </div>
