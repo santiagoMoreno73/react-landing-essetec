@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import "./Footer.css";
+import { MdPhone, MdEmail } from "react-icons/md";
 export const Footer = () => {
   return (
     <section className="footer" id="#footer">
@@ -70,9 +71,17 @@ export const Footer = () => {
             </div>
           </div>
           <div className="col-sm-6 col-lg-3">
-            <h5 className="footer-list-title mb-4">
-              Contacto (+57 312 5171049)
-            </h5>
+            <div className="mb-4">
+              <h5 className="footer-list-title mb-4">Contacto</h5>
+              <div className="d-flex align-items-center">
+                <MdPhone className="icons-sm" />
+                <h5 className="footer-list-title mx-2">+57 312 5171049</h5>
+              </div>
+              <div className="d-flex align-items-center">
+                <MdEmail className="icons-sm" />
+                <h5 className="footer-list-title mx-2">essetecsas@gmail.com</h5>
+              </div>
+            </div>
 
             <div className="d-flex align-items-center">
               <Image
