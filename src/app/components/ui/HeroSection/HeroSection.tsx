@@ -53,7 +53,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
                   <b>
                     <TypeAnimation
                       sequence={[
-                        "ESPECIALISTAS EN SEGURIDAD ELECTRONICA & TECNOLOGIA",
+                        "ESPECIALISTAS EN SEGURIDAD ELECTRÓNICA & TECNOLOGÍA",
                         1000,
                       ]}
                       wrapper="span"
