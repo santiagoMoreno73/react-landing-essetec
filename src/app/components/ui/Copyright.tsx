@@ -16,9 +16,9 @@ export const Copyright = () => {
           </div>
           <div className="col-sm-12 col-lg-6">
             <div className="float-sm-end">
-              <FaLinkedinIn className="footer-icons" />
+              {/* <FaLinkedinIn className="footer-icons" />
               <FaFacebook className="footer-icons" />
-              <FaInstagram className="footer-icons" />
+              <FaInstagram className="footer-icons" /> */}
             </div>
           </div>
         </div>
