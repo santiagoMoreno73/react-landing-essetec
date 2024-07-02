@@ -35,6 +35,25 @@ const CAMERAS = [
   },
 ];
 
+const BIOMETRICS = [
+  {
+    id: 0,
+    title: "Hullero Biométrico",
+    description:
+      "Representan una solución moderna y eficaz para la seguridad y la gestión de acceso.",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/biometrics%2Fbiometrico.jpg?alt=media&token=61fd7e1e-6217-4ac1-bfe7-9911e3197765",
+    alt: "Huellero Biométrico img",
+  },
+  {
+    id: 1,
+    title: "Video Portero",
+    description:
+      "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios.",
+    src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/biometrics%2Fvideoportero.jpeg?alt=media&token=731c82b8-0b78-4675-918b-be38a2b973f0",
+    alt: "Video Portero img",
+  },
+];
+
 const BRANDS = [
   {
     id: 0,
@@ -64,7 +83,7 @@ const BRANDS = [
 
 export const ServiceSecurity = () => {
   return (
-    <>
+    <div>
       <h4>Seguridad electrónica</h4>
       <hr />
       <p>
@@ -110,22 +129,25 @@ export const ServiceSecurity = () => {
             control de ingreso personal o personal autorizado.
           </p>
           <div className="row my-4">
-            <div className="col">
-              <CardFlip
-                id={0}
-                width={180}
-                height={180}
-                title={"Video Portero"}
-                paragraph={
-                  "Son esenciales para la seguridad y la gestión de acceso en viviendas y negocios."
-                }
-                src={"/images/services/videoportero.png"}
-                alt={"Equipo biométrico"}
-              />
-            </div>
+            {BIOMETRICS.map(({ id, title, description, src, alt }) => (
+              <div
+                className="col-sm-12 col-md-3 d-flex justify-content-center"
+                key={id}
+              >
+                <CardFlip
+                  id={0}
+                  width={180}
+                  height={180}
+                  title={title}
+                  paragraph={description}
+                  src={src}
+                  alt={alt}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
