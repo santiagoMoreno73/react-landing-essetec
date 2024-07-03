@@ -22,10 +22,11 @@ export const HeroSection: FC<HeroSectionProps> = ({
       <div className="hero-container">
         {isVideo ? (
           <div className="hero-video">
-            <video id="video" autoPlay muted loop preload="metadatos">
-              <source src="/video/video_essetec.mp4" type="video/mp4"></source>
-              <source src="" type="video/webm"></source>
-              <source src="" type="video/ogv "></source>
+            <video id="video" autoPlay muted loop preload="auto">
+              <source
+                src="https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/video_essetec.mp4?alt=media&token=c40ce818-7b5d-455f-8163-829bc57b615e"
+                type="video/mp4"
+              ></source>
             </video>
           </div>
         ) : (
