@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CardFlip, CarrouselBrand } from "../ui";
+import { CarrouselBrand } from "../ui";
 
 const BRANDS_SP = [
   {
@@ -202,7 +202,6 @@ const CARDS_OM = [
     title: "Google Workspace",
     description:
       "Conjunto de aplicaciones de productividad y colaboración en la nube de Google, que incluye Gmail, Google Drive, Google Docs, y Google Meet.",
-    href: "https://workspace.google.com/intl/es-419/",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fworkspace.png?alt=media&token=f0b1a66c-1453-4e1f-898c-8020e51dae03",
     alt: "GoogleWorkspace-logo",
   },
@@ -211,7 +210,6 @@ const CARDS_OM = [
     title: "Office-365",
     description:
       "Microsoft 365, es un servicio de suscripción de Microsoft que ofrece aplicaciones de Office como Word, Excel y PowerPoint, junto con servicios en la nube.",
-    href: "https://www.microsoft.com/es-co/microsoft-365/what-is-microsoft-365",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Foffice-365.png?alt=media&token=367f5837-386a-45b0-89a3-27567f587003",
     alt: "Office-36-logo",
   },
@@ -220,13 +218,12 @@ const CARDS_OM = [
     title: "Zimbra",
     description:
       "Plataforma de correo electrónico y colaboración de código abierto que ofrece funcionalidades como email, calendario y gestión de contactos.",
-    href: "https://www.zimbra-support.net/index.php/es/",
     src: "https://firebasestorage.googleapis.com/v0/b/essetec-base.appspot.com/o/mail-ofimatica%2Fzimbra2.jpg?alt=media&token=8e590869-449d-4589-a07b-ca65a9aa6ad8",
     alt: "Zimbra-logo",
   },
 ];
 
-export const ServiceInfraestructure = () => {
+export default function ServiceInfraestructure() {
   return (
     <div id="infraestructure">
       <h4>Infraestructura & Outsorcing de tecnología</h4>
@@ -323,15 +320,6 @@ export const ServiceInfraestructure = () => {
                   >
                     <h5 className="card-title">{card.title}</h5>
                     <p className="card-text">{card.description}</p>
-                    <div>
-                      <a
-                        href={card.href}
-                        target="_blank"
-                        className="btn btn-primary "
-                      >
-                        Mas información
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -353,4 +341,4 @@ export const ServiceInfraestructure = () => {
       </div>
     </div>
   );
-};
+}
