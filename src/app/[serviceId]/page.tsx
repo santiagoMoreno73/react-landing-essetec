@@ -1,14 +1,26 @@
 "use client";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+import { GiCctvCamera } from "react-icons/gi";
+import { IoServer } from "react-icons/io5";
+import { MdWeb } from "react-icons/md";
+
 import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { HeroSection } from "../components/ui";
-import { ServiceDetail } from "../components/service/ServiceDetail";
-import { ServiceSecurity } from "../components/service/ServiceSecurity";
-import { ServiceInfraestructure, ServiceWeb } from "../components/service";
-
-// import { ServiceDetail } from "../components/service/ServiceDetail";
+const ServiceDetail = dynamic(
+  () => import("../components/service/ServiceDetail")
+);
+const ServiceSecurity = dynamic(
+  () => import("../components/service/ServiceSecurity")
+);
+const ServiceInfraestructure = dynamic(
+  () => import("../components/service/ServiceInfraestructure")
+);
+const ServiceWeb = dynamic(() => import("../components/service/ServiceWeb"));
 
 const SERVICES = [
   {
@@ -17,52 +29,43 @@ const SERVICES = [
   },
   {
     id: "security",
-    name: "Seguridad electrónica",
+    name: "Seguridad Electrónica",
+    title: "Seguridad Electrónica",
+    color: "security",
+    icon: <GiCctvCamera className="color-white" />,
+    paragraph:
+      "Nuestros servicios de seguridad electrónica están diseñados para prevenir pérdidas, controlar accesos no autorizados y mejorar la capacidad de respuesta ante amenazas. Ofrecemos la instalación y mantenimiento de sistemas avanzados de CCTV, incluyendo cámaras análogas, IP e inalámbricas, así como soluciones de grabación con DVR y NVR. Nos adaptamos a las necesidades específicas de cada cliente para garantizar una protección óptima.",
   },
   {
     id: "infrastructure",
-    name: "Infraestructura & Outsorcing de tecnología",
+    name: "Infraestructura & Outsorcing De Tecnología",
+    title: "Infraestructura & Outsorcing de tecnologia",
+    color: "it",
+    icon: <IoServer className="color-white" />,
+    paragraph:
+      "Proveemos soluciones completas de infraestructura tecnológica y servicios de outsourcing para ayudar a su empresa a operar de manera más eficiente. Desde la implementación y mantenimiento de redes hasta la gestión de servidores y soporte técnico, nos aseguramos de que su tecnología esté siempre en su mejor estado. Nuestro equipo de expertos está dedicado a optimizar sus recursos tecnológicos para que pueda centrarse en su negocio principal.",
   },
   {
     id: "web",
-    name: "Desarrollo web",
+    name: "Desarrollo Web",
     title: "Desarrollo web",
-    subtitle: "",
-    paragraph: "",
-    options: [
-      {
-        id: 0,
-        paragraph: "",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
-      },
-      {
-        id: 1,
-        paragraph: "",
-        media: [
-          {
-            id: 0,
-            src: "/images/services/analoga.png",
-            alt: "xxxx",
-          },
-        ],
-      },
-    ],
+    color: "web",
+    icon: <MdWeb className="color-white" />,
+    paragraph:
+      "Ofrecemos servicios de desarrollo web personalizados para impulsar su presencia en línea. Nuestro equipo de desarrolladores crea sitios web atractivos, funcionales y optimizados para SEO que reflejan la identidad de su marca y cumplen con sus objetivos comerciales. Estamos aquí para ayudarle a alcanzar sus metas digitales.",
   },
 ];
 
 export default function ServicePage({ params }) {
   const [selectedId, setSelectedId] = useState(params.serviceId);
-  let currentService: any = {};
+  const [currentService, setCurrentService] = useState({ id: "" });
 
-  if (selectedId) {
-    currentService = SERVICES.find((service) => service.id == selectedId);
-  }
+  useEffect(() => {
+    const service = SERVICES.find((service) => service.id == selectedId);
+    if (service) {
+      setCurrentService(service);
+    }
+  }, [selectedId]);
 
   const handleSelectService = (serviceId: string) => {
     setSelectedId(serviceId);
@@ -114,27 +117,50 @@ export default function ServicePage({ params }) {
             <div className="col-lg-8">
               <div className="mb-5">
                 {currentService.id == "services" && (
-                  <section id="all-services">
-                    <ServiceDetail />
-                  </section>
+                  <motion.section
+                    id="all-services"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <ServiceDetail
+                      items={SERVICES}
+                      onSelect={(id: string) => handleSelectService(id)}
+                    />
+                  </motion.section>
                 )}
 
                 {currentService.id == "security" && (
-                  <section id="security">
+                  <motion.section
+                    id="security"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <ServiceSecurity />
-                  </section>
+                  </motion.section>
                 )}
 
                 {currentService.id == "infrastructure" && (
-                  <section id="infrastructure">
+                  <motion.section
+                    id="infrastructure"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <ServiceInfraestructure />
-                  </section>
+                  </motion.section>
                 )}
 
                 {currentService.id == "web" && (
-                  <section id="web">
+                  <motion.section
+                    id="web"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <ServiceWeb />
-                  </section>
+                  </motion.section>
                 )}
               </div>
             </div>
