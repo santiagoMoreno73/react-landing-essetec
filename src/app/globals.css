@@ -276,3 +276,7 @@ p {
 .img-opacity:hover {
   opacity: 0.9;
 }
+
+.pointer {
+  cursor: pointer;
+}
