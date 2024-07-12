@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const CardServiceDetail = ({ id, title, paragraph, src, alt }) => {
+export default function CardServiceDetail({ id, title, paragraph, src, alt }) {
   return (
     <div id={`card-${id}`} className="card border-dark mb-3">
       <div className="card-header">{title}</div>
@@ -17,4 +17,4 @@ export const CardServiceDetail = ({ id, title, paragraph, src, alt }) => {
       </div>
     </div>
   );
-};
+}
