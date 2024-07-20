@@ -11,16 +11,22 @@ import { MdWeb } from "react-icons/md";
 
 import { ListGroup } from "../components/ui/ListGroup/ListGroup";
 import { HeroSection } from "../components/ui";
-const ServiceDetail = dynamic(
-  () => import("../components/service/ServiceDetail")
-);
-const ServiceSecurity = dynamic(
-  () => import("../components/service/ServiceSecurity")
-);
-const ServiceInfraestructure = dynamic(
-  () => import("../components/service/ServiceInfraestructure")
-);
-const ServiceWeb = dynamic(() => import("../components/service/ServiceWeb"));
+
+import { ServiceDetail } from "../components/service";
+import { ServiceSecurity } from "../components/service";
+import { ServiceInfraestructure } from "../components/service";
+import { ServiceWeb } from "../components/service";
+
+// const ServiceDetail = dynamic(
+//   () => import("../components/service/ServiceDetail")
+// );
+// const ServiceSecurity = dynamic(
+//   () => import("../components/service/ServiceSecurity")
+// );
+// const ServiceInfraestructure = dynamic(
+//   () => import("../components/service/ServiceInfraestructure")
+// );
+// const ServiceWeb = dynamic(() => import("../components/service/ServiceWeb"));
 
 const SERVICES = [
   {
