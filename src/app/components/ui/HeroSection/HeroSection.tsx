@@ -54,22 +54,18 @@ export const HeroSection: FC<HeroSectionProps> = ({
                     alt="icon"
                     priority
                   />
-                  <h1 className="hero-title text-white mb-4">
-                    <span className="font-24">
-                      <b>
-                        <TypeAnimation
-                          sequence={[
-                            "ESPECIALISTAS EN SEGURIDAD ELECTRÓNICA & TECNOLOGÍA",
-                            1000,
-                          ]}
-                          wrapper="span"
-                          speed={50}
-                          repeat={Infinity}
-                        />
-                      </b>
-                    </span>
+                  <h1 className="hero-title text-white">
+                    <TypeAnimation
+                      sequence={[
+                        "ESPECIALISTAS EN SEGURIDAD ELECTRÓNICA & TECNOLOGÍA",
+                        1000,
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                      repeat={Infinity}
+                    />
                   </h1>
-                  <p className="hero-text font-22 text-white">{description}</p>
+                  <p className="hero-text text-white">{description}</p>
                 </motion.div>
               </div>
             </div>
